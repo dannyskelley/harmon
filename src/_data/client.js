@@ -1,6 +1,6 @@
 module.exports = {
-    name: "Providence Properties, Realty & Management",
-    email: "Victoria@providencemichigan.com",
+    name: "Infinity Home Solutions LLC",
+    email: "christina@infinityhomesolutionsllc.com",
     phoneForTel: "833 776-6348",
     phoneFormatted: "833 776-6348",
     address: {
@@ -10,7 +10,7 @@ module.exports = {
         state: "MI",
         zip: "48195",
         country: "US",
-        mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2955.699858071792!2d-83.1980291!3d42.1994846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b377a875bcc87%3A0x7aee19f28e9c0be3!2sProvidence%20Properties%2C%20Realty%20%26%20Management!5e0!3m2!1sen!2sus!4v1750338203909!5m2!1sen!2sus",
+        mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5790071.09188617!2d-91.55337122721576!3d44.87892162525881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d4caa3dc7ca0411%3A0x97dd48597a62c9b3!2sMichigan!5e0!3m2!1sen!2sus!4v1757533078489!5m2!1sen!2sus",
     },
     socials: {
         facebook: "https://www.facebook.com/Providencemichigan/",

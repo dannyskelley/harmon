@@ -1,254 +1,267 @@
 <!-- ============================================ -->
-<!--                Why Choose Us                 -->
+<!--              Side By Side Reverse            -->
 <!-- ============================================ -->
 
 <style>
   /*-- -------------------------- -->
-<!--       Why Choose Us        -->
+<---    Side By Side Reverse    -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #why-choose-1874 {
+  #sbsr-2296 {
     padding: var(--sectionPadding);
-    padding-top: 20px;
-    /* 128px - 192px */
-    padding-bottom: clamp(8rem, 14vw, 12rem);
-    background-color: #fff;
-    overflow-x: clip;
+    overflow: hidden;
     position: relative;
+    z-index: 1;
   }
-  .iframe {height: 500px;}
-   #why-choose-1874 .cs-button-solid {background-color: transparent; background-color: rgb(0,0,0,.9);}
-  #why-choose-1874 .cs-container {
+  #sbsr-2296 .cs-container {
     width: 100%;
     /* changes to 1280px at tablet */
-    max-width: 36.5rem;
+    max-width: 44rem;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
+    gap: clamp(3rem, 4vw, 4rem);
   }
-  #why-choose-1874 .cs-content {
-    /* set text align to left if content needs to be left aligned */
+  #sbsr-2296 .cs-content {
+    /* set text align to center if content needs to be centrally aligned */
     text-align: left;
     width: 100%;
+    max-width: 36.625rem;
     display: flex;
     flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
+    /* aligns content to the left, set to center to centrally align */
     align-items: flex-start;
   }
-  #why-choose-1874 .cs-title {
-    color: var(--bodyTextColor);
+  #sbsr-2296 .cs-title {
+    max-width: 30ch;
   }
-  #why-choose-1874 .cs-text {
-    /* 12px - 24px */
-    margin-bottom: clamp(0.75rem, 4vw, 1.5rem);
-    color: var(--bodyTextColor);
-    opacity: 0.7;
-   
+  #sbsr-2296 .cs-text {
+    margin-bottom: 1rem;
   }
-  #why-choose-1874 .cs-ul {
-    max-width: 39.375rem;
+  #sbsr-2296 .cs-text:last-of-type {
+    margin-bottom: 1.5rem;
+  }
+  
+  #sbsr-2296 .cs-h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5em;
     margin: 0;
-    padding: 0;
-    display: grid;
-    grid-auto-flow: row;
-    /* 4px - 12px */
-    gap: clamp(0.25rem, 2vw, 0.75rem);
+    color: var(--headerColor);
   }
-  #why-choose-1874 .cs-li {
-    font-size: var(--bodyFontSize);
+  #sbsr-2296 .cs-ul {
+    margin: 0.75rem 0 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  #sbsr-2296 .cs-li {
+    font-size: 1rem;
     line-height: 1.5em;
     list-style: none;
-    width: 100%;
+    /* 20px - 24px */
+    padding-left: clamp(1.25rem, 3vw, 1.5rem);
     color: var(--bodyTextColor);
-    opacity: 0.8;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 0.5rem;
+    position: relative;
   }
-  #why-choose-1874 .cs-check-icon {
-    width: 1.5rem;
-    height: auto;
-    /* adds extra space between the icon and top of parent so it's more centered */
-    margin-top: 1px;
+  #sbsr-2296 .cs-li strong {
+    color: var(--headerColor);
+  }
+  #sbsr-2296 .cs-li::before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: var(--secondary);
     display: block;
-  }
- 
-  #why-choose-1874 .cs-video-wrapper {
-    width: 100%;
-
-    display: block;
-   
-  }
-  #why-choose-1874 .cs-video-wrapper:hover {
-    cursor: pointer;
-  }
-  #why-choose-1874 .cs-video-wrapper:hover .cs-play {
-    transform: translate(-50%, -50%) scale(1.2);
-  }
-  #why-choose-1874 .cs-video-wrapper video,
-  #why-choose-1874 .cs-video-wrapper .cs-picture {
-    width: 100%;
-    height: 100%;
-    /* makes image act as a background image */
-    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
+    transform: rotate(45deg);
   }
-  #why-choose-1874 .cs-video-wrapper video img,
-  #why-choose-1874 .cs-video-wrapper .cs-picture img {
-    width: 100%;
-    height: 100%;
-    /* makes image act as a background image */
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #why-choose-1874 .cs-play {
-    /* 80px - 120px */
-    width: clamp(5rem, 10vw, 7.5rem);
-    height: clamp(5rem, 10vw, 7.5rem);
-    background-color: rgba(255, 255, 255, 0.2);
-    pointer-events: none;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: transform 0.3s, opacity 0.3s;
-    backdrop-filter: blur(8px);
-  }
-  #why-choose-1874 .cs-play.cs-hide {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0) !important;
-  }
-  #why-choose-1874 .cs-icon {
-    width: 1.25rem;
-    height: auto;
-  }
-  #why-choose-1874 .cs-picture {
-    width: 100%;
-    height: 95vw;
-    /* 260px - 324px */
-    min-height: clamp(16.25rem, 32vw, 20.25rem);
-    margin: clamp(3rem, 6vw, 4rem) 0 0;
-    display: block;
+  #sbsr-2296 .cs-image-group {
+    /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+    font-size: min(1.98vw, .802rem);
+    /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+    width: 46.125em;
+    height: 38.75em;
+    order: -1;
     position: relative;
     z-index: 1;
+    /* prevents flexbox from squishing it */
+    flex: none;
   }
-  #why-choose-1874 .cs-picture img {
+  #sbsr-2296 .cs-picture {
+    width: 100%;
+    height: 100%;
+    border: 1em solid #e7e7e8;
+    box-sizing: border-box;
+    display: block;
+  }
+  #sbsr-2296 .cs-picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+  #sbsr-2296 .cs-picture-wrapper1 {
+    width: 25.8125em;
+    height: 28.5625em;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
     position: absolute;
     top: 0;
     left: 0;
   }
-  #why-choose-1874 .cs-graphic {
-    width: 100%;
-    min-width: 75rem;
-    height: auto;
-    object-fit: cover;
+  #sbsr-2296 .cs-picture-wrapper2 {
+    width: 25.8125em;
+    height: 24.8125em;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1em;
+    position: absolute;
+    top: 3.25em;
+    right: 0;
+    z-index: -1;
+  }
+  #sbsr-2296 .cs-picture-wrapper3 {
+    width: 25.75em;
+    min-height: 18.375em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 9.25em;
   }
-  #why-choose-1874 .cs-dark {
-    display: none;
+  #sbsr-2296 .cs-tag {
+    /* 14px - 24px */
+    font-size: clamp(0.875rem, 1.5vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: center;
+    color: var(--headerColor);
+    display: block;
+    flex: none;
+  }
+  #sbsr-2296 .cs-arrow {
+    width: 9.25em;
+    height: auto;
+    position: absolute;
+  }
+  #sbsr-2296 .cs-arrow-left {
+    bottom: 12.5625em;
+    left: 4.5em;
+    transform: rotate(-120deg);
+  }
+  #sbsr-2296 .cs-arrow-right {
+    right: 7.125em;
+    bottom: 11.0625em;
+    transform: rotate(300deg);
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #why-choose-1874 .cs-video-wrapper {
-    height: 90%;
-    max-height: 100%;
-    /* 420px - 740px */
-    min-height: clamp(26.25rem, 50vw, 46.25rem);
-  }
-  #why-choose-1874 .cs-container {
+  #sbsr-2296 .cs-container {
     max-width: 80rem;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: stretch;
-  }
-  #why-choose-1874 .cs-content {
-    width:50%;
- 
-    /* prevents flexbox from squishing it */
-    flex: none;
-  }
-  #why-choose-1874 .cs-ul {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  #why-choose-1874 .cs-picture {
-    height: 100%;
-    max-height: 100%;
   }
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    .iframe {height: 500px;}
-  #why-choose-1874 {
-    padding-bottom: 0px;
-    margin-top: 40px;
-  }
-  #why-choose-1874 .cs-container {
+  #sbsr-2296 .cs-container {
+    flex-direction: row;
     align-items: stretch;
   }
-  #why-choose-1874 .cs-video-wrapper {
+  #sbsr-2296 .cs-image-group {
+    font-size: min(1.1vw, 1rem);
     height: auto;
-    margin-bottom: 8.75rem;
+    min-height: 38.75em;
+    order: initial;
+    flex: none;
   }
-}
-
-@media only screen and (min-width: 84rem) {
-    .iframe {height: 750px;}
+  #sbsr-2296 .cs-picture-wrapper1 {
+    height: auto;
+    bottom: 10.1875em;
+  }
+  #sbsr-2296 .cs-picture-wrapper2 {
+    height: auto;
+    bottom: 10.625em;
+  }
+  #sbsr-2296 .cs-picture-wrapper3 .cs-picture {
+    height: 15.5625em;
+  }
 }
                                 
 </style>
 
-<section id="why-choose-1874">
+<section id="sbsr-2296">
     <div class="cs-container">
-        <div class="cs-content">
-           <span class="cs-topper"  data-aos="fade-right"> Buy or Sell your home with </span>
-            <h2 class="cs-title"  data-aos="fade-left">Michigan’s #5 Ranked Realtor
-
-</h2><DIV data-aos="fade-up">
+        <div class="cs-content" data-aos="fade-up">
+            <span class="cs-topper"  >Infinity Home Solutions</span>
+            <h2 class="cs-title"  >Making Your Michigan House Your Forever Home</h2>
             <p class="cs-text">
-                When you're ready to make a move in Metro Detroit, work with the boutique brokerage that brings hustle, experience, and unmatched results to every deal. We are known for our creative marketing, zealous approach to deals and constantly outworking the competition.
+                Infinity Home Solutions is a family owned Michigan contractor specializing in 
+                <strong>roofing, siding, windows, decks, and dumpster rentals</strong>. With over 
+                100 years of combined experience, our licensed and insured team delivers honest 
+                craftsmanship, fair pricing, and long lasting results, backed by a minimum 10 year 
+                labor warranty and a 100% satisfaction guarantee.
             </p>
-       
-            <a style="margin-top: 10px;" class="cs-button-solid" href="/contact" >Free Consultation</a></DIV>
-        
-
-              {% include 'sections/logos.html' %}
-
-
+            <h3 class="cs-h3">Why Homeowners Choose Us</h3>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <strong>Roofing & Siding</strong>: Durable protection designed for Michigan weather.
+                </li>
+                <li class="cs-li">
+                    <strong>Windows & Decks</strong>: Energy efficient upgrades and outdoor living spaces.
+                </li>
+                <li class="cs-li">
+                    <strong>Dumpster Rentals</strong>: Reliable, affordable options for cleanups and remodels.
+                </li>
+                <li class="cs-li">
+                    <strong>Family Owned Integrity</strong>: Trust, fairness, and workmanship you can count on.
+                </li>
+            </ul>
+            <a href="tel:8337766348" class="cs-button-solid">Get Your Free Quote Today</a>
         </div>
-      
-        <div class="cs-video-wrapper"  >
-            <!--Compress your video and upload it to a CDN like Digital Oceans Spaces so the video file doesn't cause load time issues. You can also remove the video tag and uncomment the picture tag to use a image instead of a video. Don't forget to remove the cs-play button!-->
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKlTNg8Bs16/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:rgba(0,0,0,0.0); border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.0),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DKlTNg8Bs16/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:rgba(0,0,0,0.0); line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DKlTNg8Bs16/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Victoria Camaj (@vctoriacamaj)</a></p></div></blockquote>
-<script async src="//www.instagram.com/embed.js"></script>
-            <!-- <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-hero.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-hero.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-hero.jpg" alt="body builder" width="630" height="877">
-                </picture> -->
-
+        <div class="cs-image-group"  data-aos="fade-up">
+            <!--Main Image-->
+            <div class="cs-picture-wrapper1">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after1.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after1.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after1.jpg" alt="Finished roofing and siding project in Michigan" width="272" height="337">
+                </picture>
+                <span class="cs-tag">After</span>
+            </div>
+            <!--Small Image-->
+            <div class="cs-picture-wrapper2">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after2.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after2.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after2.jpg" alt="New windows and deck installation in Michigan" width="243" height="367">
+                </picture>
+                <span class="cs-tag">After</span>
+            </div>
+            <!--Small Image-->
+            <div class="cs-picture-wrapper3">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-before.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-before.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-before.jpg" alt="Home exterior before renovation" width="243" height="367">
+                </picture>
+                <span class="cs-tag">Before</span>
+            </div>
+            
+            <img class="cs-arrow cs-arrow-left" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/construction-arrow-left.svg" alt="arrow left" width="148" height="54">
+            <img class="cs-arrow cs-arrow-right" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/construction-arrow-right.svg" alt="arrow right" width="148" height="54">
         </div>
     </div>
-   </section>
-                                
+</section>
+                   
