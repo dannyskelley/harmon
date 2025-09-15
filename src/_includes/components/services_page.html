@@ -1,0 +1,302 @@
+<style>
+    /*-- -------------------------- -->
+<---        Content Page        -->
+<--- -------------------------- -*/
+
+    /* Mobile - 360px */
+    @media only screen and (min-width: 0rem) {
+        #content-page-852 {
+            padding: var(--sectionPadding);
+            background-color: #fff;
+            /* clips the wave background from causing overflow issues when it goes off screen */
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        #content-page-852 .cs-container {
+            width: 100%;
+            max-width: 75rem;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+        }
+
+        #content-page-852 .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        #content-page-852 .cs-title {
+            font-size: var(--headerFontSize);
+            font-weight: 900;
+            line-height: 1.2em;
+            text-align: inherit;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 0 1rem 0;
+            color: var(--headerColor);
+            position: relative;
+            padding-top: 50px;
+            ;
+        }
+
+        #content-page-852 h2,
+        #content-page-852 h3,
+        #content-page-852 h4,
+        #content-page-852 h5,
+        #content-page-852 h6 {
+            font-weight: 700;
+            text-align: inherit;
+            margin: 0 0 1rem 0;
+            color: var(--headerColor);
+        }
+
+        #content-page-852 h2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
+
+        #content-page-852 h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        #content-page-852 h4,
+        #content-page-852 h5,
+        #content-page-852 h6 {
+            font-size: 1.25rem;
+        }
+
+        #content-page-852 .cs-button-solid {
+            margin-bottom: 2rem;
+        }
+
+        #content-page-852 .cs-no-margin {
+            margin: 0;
+        }
+
+        #content-page-852 .cs-color {
+            color: var(--primary);
+        }
+
+        #content-page-852 p {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            margin: 0 0 1rem 0;
+            color: var(--bodyTextColor);
+        }
+
+        #content-page-852 p:last-of-type {
+            margin-bottom: 2rem;
+        }
+
+        #content-page-852 p a {
+            font-size: inherit;
+            line-height: inherit;
+            text-decoration: underline;
+            color: var(--primary);
+        }
+
+        #content-page-852 ol,
+        #content-page-852 ul {
+            padding-left: 1.5rem;
+            margin: 0 0 2rem 0;
+            color: var(--bodyTextColor);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        #content-page-852 ul li {
+            list-style: none;
+            color: inherit;
+            position: relative;
+        }
+
+        #content-page-852 ul li:before {
+            /* custom list bullet */
+            content: "";
+            width: 3px;
+            height: 3px;
+            background: currentColor;
+            opacity: 1;
+            border-radius: 50%;
+            position: absolute;
+            display: block;
+            top: 0.625rem;
+            left: -0.75rem;
+        }
+
+        #content-page-852 img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #content-page-852 .cs-image-group {
+            width: 50%;
+            max-width: 27.0625rem;
+            display: none;
+            flex-direction: column;
+            gap: 1.25rem;
+            position: relative;
+        }
+
+        #content-page-852 .cs-image-group:after {
+            /* colored box */
+            content: "";
+            width: 100%;
+            /* 177px - 258px */
+            height: clamp(11.0625rem, 19vw, 16.125rem);
+            background: var(--primary);
+            border-radius: 6.25rem 0 6.25rem;
+            opacity: 0.15;
+            display: block;
+        }
+
+        #content-page-852 .cs-picture {
+            width: 100%;
+            /* 300px - 520px */
+            height: clamp(18.75rem, 40vw, 32.5rem);
+            box-shadow: 0px 3.3478px 50.2169px rgba(0, 0, 0, 0.16);
+            /* 125px - 200px */
+            border-radius: 0 clamp(7.8125rem, 15vw, 12.5rem) 0 clamp(7.8125rem, 15vw, 12.5rem);
+            /* prevents border from affecting height and width */
+            box-sizing: border-box;
+            /* clips img tag corners */
+            overflow: hidden;
+            display: block;
+            position: relative;
+        }
+
+        #content-page-852 .cs-picture img {
+            width: 100%;
+            height: 100%;
+            /* makes it act like a background image */
+            object-fit: cover;
+        }
+    }
+
+    /* Tablet - 768px */
+    @media only screen and (min-width: 48rem) {
+        #content-page-852 .cs-container {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        #content-page-852 .cs-content {
+            flex: none;
+           
+            margin: auto;
+            /* sens it to the right in the 2nd position */
+            order: 2;
+        }
+
+        #content-page-852 .cs-image-group {
+            display: flex;
+        }
+    }
+</style>
+<section id="content-page-852">
+  <div class="cs-container">
+    <div class="cs-content">
+   
+
+      <!-- Haircuts & Styling -->
+      <h3 class="cs-title" id="precision-haircuts">Precision Haircuts & Styling</h3>
+      <p>Face-flattering cuts and polished styling for women, men, and children.</p>
+      <ul>
+        <li>Cut and Style: <strong>$47+</strong></li>
+        <li>Shampoo and Style: <strong>$30+</strong></li>
+        <li>Men’s Cut: <strong>$32+</strong></li>
+        <li>Kids Cut: <strong>$22+</strong></li>
+        <li>Updo or Formal Style: <strong>$55–$80</strong></li>
+        <li>Fairy Hair (per strand): <strong>$2 each</strong></li>
+      </ul>
+      <div style="margin:0 0 60px;">{% include 'components/cta_button.html' %}</div>
+
+      <!-- Color & Highlights -->
+      <h3 class="cs-title" id="haircolor-highlights">Expert Haircolor & Highlights</h3>
+      <p>Custom color, gray coverage, dimensional highlights, and corrective color using professional products.</p>
+      <ul>
+        <li>Single Process Color: <strong>$73+</strong></li>
+        <li>Full Highlight: <strong>$112+</strong></li>
+        <li>Partial Highlight: <strong>$90+</strong></li>
+        <li>Olaplex Add-On: <strong>$35</strong></li>
+      </ul>
+      <div style="margin:0 0 60px;">{% include 'components/cta_button.html' %}</div>
+
+      <!-- Texture & Treatments -->
+      <h3 class="cs-title" id="texture-treatments">Texture, Keratin & Conditioning</h3>
+      <p>Smoother, shinier, healthier hair tailored to your texture and lifestyle.</p>
+      <ul>
+        <li>Perm: <strong>$110+</strong></li>
+        <li>Brazilian Blowout Keratin Treatment: <strong>$105/hour</strong></li>
+        <li>Conditioning Treatment: <strong>$15+</strong></li>
+        <li>Olaplex Treatment: <strong>$35</strong></li>
+      </ul>
+      <div style="margin:0 0 60px;">{% include 'components/cta_button.html' %}</div>
+
+      <!-- Extensions -->
+      <h3 class="cs-title" id="extensions">Extensions & Long Hair Services</h3>
+      <p>Volume, length, or a transformation installed and maintained by specialists.</p>
+      <ul>
+        <li>Hair Extensions: <strong>$105/hour</strong> (plus cost of hair)</li>
+        <li>Long Hair Maintenance & Styling: <strong>priced by consultation</strong></li>
+      </ul>
+      <div style="margin:0 0 60px;">{% include 'components/cta_button.html' %}</div>
+
+      <!-- Skin Services -->
+      <h3 class="cs-title" id="skin-services">Skin Services: Facials & Waxing</h3>
+      <p>Refresh and refine your skin with targeted facials and gentle waxing.</p>
+      <ul>
+        <li>Facials: <strong>$80+</strong></li>
+        <li>Four Layer Facial: <strong>$110</strong></li>
+        <li>Microdermabrasion: <strong>$110</strong></li>
+        <li>Brow Wax: <strong>$15</strong></li>
+        <li>Lip Wax: <strong>$15</strong></li>
+        <li>Chin Wax: <strong>$15</strong></li>
+        <li>Half Arm Wax: <strong>$35+</strong>, Full Arm: <strong>$66+</strong></li>
+        <li>Half Leg Wax: <strong>$45+</strong>, Full Leg: <strong>$76+</strong></li>
+        <li>Bikini Wax: <strong>$40+</strong>, Brazilian: <strong>$57+</strong>, Back: <strong>$66+</strong></li>
+      </ul>
+      <div style="margin:0 0 60px;">{% include 'components/cta_button.html' %}</div>
+
+      <!-- Bridal -->
+      <h3 class="cs-title" id="bridal">Bridal Hair & Makeup</h3>
+      <p>Timeless, photo-ready hair and makeup for your wedding day available in-salon or on-location.</p>
+      <ul>
+        <li>Hair and Makeup (In-Salon): <strong>$130 per client</strong></li>
+        <li>Hair and Makeup (On Location): <strong>$210 per client</strong></li>
+        <li>Hair Only (In-Salon): <strong>$80 per client</strong></li>
+        <li>Hair Only (On Location): <strong>$130 per client</strong></li>
+        <li>Bridal trials and group scheduling available</li>
+      </ul>
+      <div style="margin:0 0 60px;">{% include 'components/cta_button.html' %}</div>
+
+      <!-- Why Choose -->
+      <h3 class="cs-title" id="why-choose">Why Choose Fleur de Lis Salon?</h3>
+      <p>
+        • Family owned, trusted in Port Orange for 25+ years<br>
+        • Licensed team specializing in color, highlights, extensions and keratin<br>
+        • Personalized consultations and ongoing education<br>
+        • Comfortable, welcoming atmosphere on Dunlawton Ave
+      </p>
+      <div style="margin:0 0 60px;">{% include 'components/cta_button.html' %}</div>
+    </div>
+  </div>
+</section>
