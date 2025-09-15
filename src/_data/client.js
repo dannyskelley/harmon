@@ -18,7 +18,7 @@ module.exports = {
         google: "https://g.co/kgs/n4aSPHz",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    domain: "https://www.example.com",
+    domain: "https://infinityhomesolutionsllc.com",
     // Passing the isProduction variable for use in HTML templates
     isProduction: process.env.ELEVENTY_ENV === "PROD",
 };
