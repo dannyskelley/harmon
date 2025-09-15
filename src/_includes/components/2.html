@@ -89,7 +89,7 @@
     font-size: min(1.98vw, .802rem);
     /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
     width: 46.125em;
-    height: 38.75em;
+min-height: 300px;
     order: -1;
     position: relative;
     z-index: 1;
@@ -97,22 +97,22 @@
     flex: none;
   }
   #sbsr-2296 .cs-picture {
-    width: 100%;
-    height: 100%;
+    width: auto;
+height: auto;
     border: 1em solid #e7e7e8;
     box-sizing: border-box;
     display: block;
   }
   #sbsr-2296 .cs-picture img {
     width: 100%;
-    height: 100%;
+height: 100%;
     object-fit: cover;
     top: 0;
     left: 0;
   }
   #sbsr-2296 .cs-picture-wrapper1 {
     width: 25.8125em;
-    height: 28.5625em;
+    height: auto;
     display: flex;
     flex-direction: column-reverse;
     gap: 1rem;
@@ -122,12 +122,12 @@
   }
   #sbsr-2296 .cs-picture-wrapper2 {
     width: 25.8125em;
-    height: 24.8125em;
+    height:auto;
     display: flex;
     flex-direction: column-reverse;
     gap: 1em;
     position: absolute;
-    top: 3.25em;
+    top: 6.25em;
     right: 0;
     z-index: -1;
   }
@@ -138,7 +138,7 @@
     flex-direction: column;
     gap: 1em;
     position: absolute;
-    bottom: 0;
+    top: 16.25em;
     left: 9.25em;
   }
   #sbsr-2296 .cs-tag {
@@ -172,6 +172,11 @@
   #sbsr-2296 .cs-container {
     max-width: 80rem;
   }
+  #sbsr-2296 .cs-image-group {
+    height: auto;
+    min-height: 38.75em;
+  
+}
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -188,14 +193,14 @@
   }
   #sbsr-2296 .cs-picture-wrapper1 {
     height: auto;
-    bottom: 10.1875em;
+
   }
   #sbsr-2296 .cs-picture-wrapper2 {
     height: auto;
-    bottom: 10.625em;
+
   }
   #sbsr-2296 .cs-picture-wrapper3 .cs-picture {
-    height: 15.5625em;
+    height: auto;
   }
 }
                                 
@@ -208,7 +213,7 @@
             <h2 class="cs-title"  >Making Your Michigan House Your Forever Home</h2>
             <p class="cs-text">
                 Infinity Home Solutions is a family owned Michigan contractor specializing in 
-                <strong>roofing, siding, windows, decks, and dumpster rentals</strong>. With over 
+                <strong>Roofing, Siding, Windows, Decks, and Dumpster Rentals</strong>. With over 
                 100 years of combined experience, our licensed and insured team delivers honest 
                 craftsmanship, fair pricing, and long lasting results, backed by a minimum 10 year 
                 labor warranty and a 100% satisfaction guarantee.
@@ -234,34 +239,32 @@
             <!--Main Image-->
             <div class="cs-picture-wrapper1">
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after1.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after1.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after1.jpg" alt="Finished roofing and siding project in Michigan" width="272" height="337">
+                    <source media="(max-width: 600px)" srcset="/assets/images/1.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/1.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/1.jpg" alt="Finished roofing and siding project in Michigan" width="272" height="337">
                 </picture>
-                <span class="cs-tag">After</span>
+              
             </div>
             <!--Small Image-->
             <div class="cs-picture-wrapper2">
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after2.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after2.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after2.jpg" alt="New windows and deck installation in Michigan" width="243" height="367">
+                    <source media="(max-width: 600px)" srcset="/assets/images/2.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/2.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/2.jpg" alt="New windows and deck installation in Michigan" width="243" height="367">
                 </picture>
-                <span class="cs-tag">After</span>
+              
             </div>
             <!--Small Image-->
             <div class="cs-picture-wrapper3">
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-before.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-before.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-before.jpg" alt="Home exterior before renovation" width="243" height="367">
+                    <source media="(max-width: 600px)" srcset="/assets/images/3.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/3.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/3.jpg" alt="Home exterior before renovation" width="243" height="367">
                 </picture>
-                <span class="cs-tag">Before</span>
+            
             </div>
             
-            <img class="cs-arrow cs-arrow-left" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/construction-arrow-left.svg" alt="arrow left" width="148" height="54">
-            <img class="cs-arrow cs-arrow-right" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/construction-arrow-right.svg" alt="arrow right" width="148" height="54">
-        </div>
+              </div>
     </div>
 </section>
                    
