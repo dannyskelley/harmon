@@ -11,8 +11,9 @@
 
 /* CodeStitch Core Styles + Reset */
 @media only screen and (min-width: 0rem) {
-.hidden {
-    display: none !important;}
+    .hidden {
+        display: none !important;
+    }
 
     /* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     :root {
@@ -24,10 +25,10 @@
         --headerColor: #1a1a1a;
         --bodyTextColor: #4e4b66;
         --bodyTextColorWhite: #fafbfc;
-         --navBg: #fff;
+        --navBg: #fff;
 
-   
- --topperFontSize: clamp(1.5rem, 2.1vw, 1rem);
+
+        --topperFontSize: clamp(1.5rem, 2.1vw, 1rem);
         /* 31px - 49px */
         --headerFontSize: clamp(2.55375rem, 2.9vw, 3.0rem);
         --bodyFontSize: 1rem;
@@ -35,9 +36,9 @@
         --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 2rem;
 
         --headerFont: "Nunito Sans", Arial, sans-serif;
-         --fontFamily: "Nunito Sans", Arial, sans-serif;
+        --fontFamily: "Nunito Sans", Arial, sans-serif;
         --navFont: "Nunito Sans", Arial, sans-serif;
-         --buttonFont: "Nunito Sans", Arial, sans-serif;
+        --buttonFont: "Nunito Sans", Arial, sans-serif;
         --bodyFont: "Roboto", Arial, sans-serif;
     }
 
@@ -83,7 +84,7 @@
         color: var(--headerColor);
         text-align: inherit;
         font-family: "Nunito Sans", Arial, sans-serif;
-        
+
     }
 
     .cs-text {
@@ -99,7 +100,9 @@
 
 /* Components + Utilities */
 @media only screen and (min-width: 0rem) {
-.hidden {display: none;}
+    .hidden {
+        display: none;
+    }
 
     // Hidden screen reader skip nav button
     .skip {
@@ -109,38 +112,46 @@
         left: 0;
         opacity: 0;
     }
-   .cs-button-solid:hover { box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);}
+
+    .cs-button-solid:hover {
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+    }
+
     // Buttons - can be replaced using CodeStitch's "Button" Stitches. Make sure to clear the default .cs-button-solid/outline styles from any new stitches you place.
-        // Button - can be replaced using CodeStitch's "Button" Stitches
-    .cs-button-solid:hover { box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);}
+    // Button - can be replaced using CodeStitch's "Button" Stitches
+    .cs-button-solid:hover {
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+    }
+
     .cs-button-solid {
-       
+
         z-index: 1;
         position: relative;
         text-transform: uppercase;
         display: inline-block;
         background-color: var(--primary);
         width: auto;
-        border:0px solid white;
+        border: 0px solid white;
         padding: 20px 30px;
         text-decoration: none;
-    border-radius: 0px;
-    font-family: "Nunito Sans";
+        border-radius: 0px;
+        font-family: "Nunito Sans";
         font-size: calc(16 / 16 * 1rem);
         font-weight: 700;
         line-height: 22px;
         font-weight: bold;
         // Transition Properties
         color: white;
-        
+
         text-align: center;
 
         &:hover {
             color: black;
+
             &:before {
                 width: 100%;
                 opacity: 1;
-               
+
             }
         }
 
@@ -154,9 +165,9 @@
             display: block;
             background-color: #fff;
             height: 100%;
-            border:2px solid black;
+            border: 2px solid black;
             opacity: 0;
-            
+
 
             //Transition properties
             width: 0;
@@ -227,6 +238,7 @@
     }
 
     body.dark-mode {
+
         .cs-light,
         .light {
             display: none !important;
@@ -257,6 +269,7 @@
 
 /* Base Element Styles */
 @media only screen and (min-width: 0rem) {
+
     h1,
     h2,
     h3,
@@ -320,8 +333,8 @@
         src: local(""),
             url("/assets/fonts/nunito-sans-v18-latin-900.woff2") format("woff2"),
             /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url("/assets/fonts/nunito-sans-v18-latin-900.woff2")
-                format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            url("/assets/fonts/nunito-sans-v18-latin-900.woff2") format("woff");
+        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
 
     /* roboto-regular - latin */
@@ -331,7 +344,9 @@
         font-weight: 400;
         font-display: swap;
         src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff");
+        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
 
     /* roboto-700 - latin */
@@ -341,7 +356,9 @@
         font-weight: 700;
         font-display: swap;
         src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("/assets/fonts/roboto-v29-latin-700.woff") format("woff");
+        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
 
     /* roboto-900 - latin */
@@ -351,7 +368,9 @@
         font-weight: 900;
         font-display: swap;
         src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("/assets/fonts/roboto-v29-latin-900.woff") format("woff");
+        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
 }
 
@@ -437,7 +456,7 @@
         width: 100%;
         /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
-      
+
         background-color: #fff;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         position: fixed;
@@ -485,7 +504,7 @@
             align-items: center;
         }
 
-    
+
 
         .cs-toggle {
             /* 44px - 48px */
@@ -605,33 +624,41 @@
             &:nth-of-type(1) {
                 transition-delay: 0.05s;
             }
+
             &:nth-of-type(2) {
                 transition-delay: 0.1s;
             }
+
             &:nth-of-type(3) {
                 transition-delay: 0.15s;
             }
+
             &:nth-of-type(4) {
                 transition-delay: 0.2s;
             }
+
             &:nth-of-type(5) {
                 transition-delay: 0.25s;
             }
+
             &:nth-of-type(6) {
                 transition-delay: 0.3s;
             }
+
             &:nth-of-type(7) {
                 transition-delay: 0.35s;
             }
+
             &:nth-of-type(8) {
                 transition-delay: 0.4s;
             }
+
             &:nth-of-type(9) {
                 transition-delay: 0.45s;
             }
         }
 
-       
+
 
         .cs-button-solid {
             display: none;
@@ -693,7 +720,7 @@
             flex: none;
         }
 
-  
+
     }
 }
 
@@ -752,6 +779,7 @@
             align-items: center;
 
             &:last-of-type {
+
                 /* remove the chevron on the last list item */
                 &::after {
                     display: none;
@@ -850,6 +878,7 @@
             margin-bottom: calc(16 / 16 * 1rem);
             color: var(--bodyTextColorWhite);
             opacity: 0.8;
+
             &:last-of-type {
                 margin-bottom: calc(32 / 16 * 1rem);
             }
@@ -920,7 +949,7 @@
             position: relative;
         }
 
-    
+
 
         .cs-text {
             color: var(--bodyTextColorWhite);
@@ -970,6 +999,7 @@
         .cs-nav-li {
             list-style: none;
             margin-bottom: calc(16 / 16 * 1rem);
+
             &:last-of-type {
                 margin-bottom: 0;
             }
@@ -1032,12 +1062,13 @@
         .cs-contact-li {
             list-style: none;
             margin-bottom: calc(0 / 16 * 1rem);
+
             &:last-of-type {
                 margin-bottom: 0;
             }
         }
 
-        
+
 
         .cs-address {
             font-size: calc(16 / 16 * 1rem);
