@@ -784,6 +784,26 @@
             margin-left: 1.5rem;
         }
     }
+
+
+
+    /* Desktop click-to-open behavior */
+@media only screen and (min-width: 64rem) {
+  /* show when JS adds .cs-open */
+  #cs-navigation .cs-dropdown.cs-open .cs-drop-ul {
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  /* ensure the panel sits above the header */
+  #cs-navigation .cs-dropdown .cs-drop-ul { z-index: 1000; }
+
+  /* OPTIONAL: neutralize hover-open without rewriting your styles
+     (comment out your existing :hover open rules if you prefer) */
+  /* #cs-navigation .cs-dropdown:hover .cs-drop-ul { }
+     #cs-navigation .cs-dropdown:hover .cs-drop-li { } */
+}
+
 </style>
 
 <header id="cs-navigation">
@@ -848,19 +868,19 @@
                         </span>
                         <ul class="cs-drop-ul">
     <li class="cs-drop-li">
-        <a href="" class="cs-li-link cs-drop-link">Roofing</a>
+        <a href="/services" class="cs-li-link cs-drop-link">Roofing</a>
     </li>
     <li class="cs-drop-li">
-        <a href="" class="cs-li-link cs-drop-link">Siding</a>
+        <a href="/services" class="cs-li-link cs-drop-link">Siding</a>
     </li>
     <li class="cs-drop-li">
-        <a href="" class="cs-li-link cs-drop-link">Windows</a>
+        <a href="/services" class="cs-li-link cs-drop-link">Windows</a>
     </li>
     <li class="cs-drop-li">
-        <a href="" class="cs-li-link cs-drop-link">Decks</a>
+        <a href="/services" class="cs-li-link cs-drop-link">Decks</a>
     </li>
     <li class="cs-drop-li">
-        <a href="" class="cs-li-link cs-drop-link">Dumpster Rentals</a>
+        <a href="/services" class="cs-li-link cs-drop-link">Dumpster Rentals</a>
     </li>
 </ul>
 
@@ -883,51 +903,110 @@
     </div>
 </header>
 <script>
-    // add classes for mobile navigation toggling
-    var CSbody = document.querySelector("body");
-    const CSnavbarMenu = document.querySelector("#cs-navigation");
-    const CShamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
+  // ===== Base refs
+  const CSbody = document.body;
+  const CSnavbarMenu = document.querySelector("#cs-navigation");
+  const CShamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
 
-    CShamburgerMenu.addEventListener('click', function () {
-        CShamburgerMenu.classList.toggle("cs-active");
-        CSnavbarMenu.classList.toggle("cs-active");
-        CSbody.classList.toggle("cs-open");
-        // run the function to check the aria-expanded value
-        ariaExpanded();
+  // Mobile hamburger toggle
+  CShamburgerMenu.addEventListener("click", () => {
+    CShamburgerMenu.classList.toggle("cs-active");
+    CSnavbarMenu.classList.toggle("cs-active");
+    CSbody.classList.toggle("cs-open");
+    ariaExpandedGlobal();
+  });
+
+  // ARIA expanded on main UL
+  function ariaExpandedGlobal() {
+    const csUL = document.querySelector("#cs-expanded");
+    if (!csUL) return;
+    const expanded = csUL.getAttribute("aria-expanded") === "true";
+    csUL.setAttribute("aria-expanded", String(!expanded));
+  }
+
+  // Scroll class
+  document.addEventListener("scroll", () => {
+    const scroll = document.documentElement.scrollTop;
+    if (scroll >= 60) CSbody.classList.add("scroll");
+    else CSbody.classList.remove("scroll");
+  });
+
+  // ===== Dropdown behavior
+  const dropDowns = Array.from(document.querySelectorAll("#cs-navigation .cs-dropdown"));
+  const isDesktop = () => window.matchMedia("(min-width: 64rem) and (hover:hover) and (pointer:fine)").matches;
+
+  function closeAllDropdowns() {
+    dropDowns.forEach(dd => {
+      dd.classList.remove("cs-open");
+      const trigger = dd.querySelector(".cs-li-link[role='button']");
+      if (trigger) trigger.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  // Bind desktop click-to-open, stay-open until outside click
+  dropDowns.forEach(dd => {
+    const trigger = dd.querySelector(".cs-li-link");
+    if (!trigger) return;
+
+    // make it a proper button for a11y
+    trigger.setAttribute("role", "button");
+    trigger.setAttribute("aria-haspopup", "true");
+    trigger.setAttribute("aria-expanded", "false");
+
+    // Toggle on click (desktop only)
+    trigger.addEventListener("click", (e) => {
+      if (!isDesktop()) return; // mobile handled below
+      e.preventDefault();
+      e.stopPropagation();
+
+      const isOpen = dd.classList.contains("cs-open");
+      closeAllDropdowns();
+      if (!isOpen) {
+        dd.classList.add("cs-open");
+        trigger.setAttribute("aria-expanded", "true");
+      }
     });
 
-    // checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not 
-    function ariaExpanded() {
-        const csUL = document.querySelector('#cs-expanded');
-        const csExpanded = csUL.getAttribute('aria-expanded');
-
-        if (csExpanded === 'false') {
-            csUL.setAttribute('aria-expanded', 'true');
-        } else {
-            csUL.setAttribute('aria-expanded', 'false');
-        }
-    }
-
-    // This script adds a class to the body after scrolling 100px
-    // and we used these body.scroll styles to create some on scroll 
-    // animations with the navbar
-
-    document.addEventListener('scroll', (e) => {
-        const scroll = document.documentElement.scrollTop;
-        if (scroll >= 60) {
-            document.querySelector('body').classList.add('scroll')
-        } else {
-            document.querySelector('body').classList.remove('scroll')
-        }
+    // Keep clicks inside open panel from bubbling to document
+    dd.addEventListener("click", (e) => {
+      if (!isDesktop()) return;
+      e.stopPropagation();
     });
 
-    // mobile nav toggle code
-    const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropdown'));
-    for (const item of dropDowns) {
-        const onClick = () => {
-            item.classList.toggle('cs-active')
-        }
-        item.addEventListener('click', onClick)
-    }
+    // Keyboard support (desktop)
+    trigger.addEventListener("keydown", (e) => {
+      if (!isDesktop()) return;
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        trigger.click();
+      }
+      if (e.key === "Escape") {
+        closeAllDropdowns();
+        trigger.focus();
+      }
+    });
+  });
 
+  // Click outside to close (desktop only)
+  document.addEventListener("click", () => {
+    if (!isDesktop()) return;
+    closeAllDropdowns();
+  });
+
+  // Reset on resize crossing breakpoint
+  window.addEventListener("resize", () => closeAllDropdowns());
+
+  // ===== Mobile dropdown tap-to-toggle (unchanged)
+  dropDowns.forEach(dd => {
+    dd.addEventListener("click", (e) => {
+      if (isDesktop()) return; // desktop handled above
+      const trigger = dd.querySelector(".cs-li-link");
+      if (!trigger) return;
+      // Only toggle if the trigger itself was tapped
+      if (e.target === trigger || trigger.contains(e.target)) {
+        e.preventDefault();
+        dd.classList.toggle("cs-active");
+      }
+    }, { passive: false });
+  });
 </script>

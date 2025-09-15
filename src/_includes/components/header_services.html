@@ -7,127 +7,138 @@
 <---          Banner            -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #banner-1881 {
-    padding: var(--sectionPadding);
-    /* 180px - 242px */
-    padding-top: clamp(11.25rem, 27vw, 15.125rem);
-    /* 60px - 182px */
-    padding-bottom: clamp(3.75rem, 14vw, 11.375rem);
-    /* clips the line from causing overflow issues for going off screen */
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    background-color: #FAF7F4;
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #banner-1881 {
+      padding: var(--sectionPadding);
+      /* 180px - 242px */
+      padding-top: clamp(11.25rem, 27vw, 15.125rem);
+      /* 60px - 182px */
+
+      /* clips the line from causing overflow issues for going off screen */
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      background-color: #fff;
+    }
+
+    #banner-1881 .cs-container {
+      text-align: center;
+      width: 100%;
+      max-width: 75rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    #banner-1881 .cs-int-title {
+      /* 39px - 61px */
+      font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+      font-weight: 900;
+      line-height: 1.2em;
+      text-align: inherit;
+      margin: 0;
+      color: var(--headerColor);
+      position: relative;
+    }
+
+    #banner-1881 .cs-breadcrumbs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #banner-1881 .cs-link {
+      font-size: 1rem;
+      line-height: 1.2em;
+      text-decoration: none;
+      color: var(--primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    #banner-1881 .cs-link:last-of-type {
+      /* remove the chevron on the last list item */
+    }
+
+    #banner-1881 .cs-link:last-of-type::after {
+      display: none;
+    }
+
+    #banner-1881 .cs-link:after {
+      /* chevron */
+      content: "";
+      width: 0.4375rem;
+      height: 0.75rem;
+      margin: 0 1rem;
+      background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-right-arrow-2.svg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: block;
+      position: relative;
+    }
+
+    #banner-1881 .cs-link.cs-active {
+      color: var(--bodyTextColor);
+    }
+
+    #banner-1881 .cs-background {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    #banner-1881 .cs-background:before {
+      /* background color overlay */
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #FAF6F2;
+      opacity: 0.84;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    #banner-1881 .cs-background img {
+      width: 100%;
+      height: 100%;
+      /* Makes img tag act as a background image */
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #banner-1881 .cs-graphic {
+      /* 123px - 227px */
+      width: clamp(7.71rem, 22.5vw, 14.19rem);
+      height: auto;
+      position: absolute;
+      top: 1.25rem;
+      right: -2rem;
+      z-index: -1;
+    }
   }
-  #banner-1881 .cs-container {
-    text-align: center;
-    width: 100%;
-    max-width: 75rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-  #banner-1881 .cs-int-title {
-    /* 39px - 61px */
-    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-    font-weight: 900;
-    line-height: 1.2em;
-    text-align: inherit;
-    margin: 0;
-    color: var(--headerColor);
-    position: relative;
-  }
-  #banner-1881 .cs-breadcrumbs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #banner-1881 .cs-link {
-    font-size: 1rem;
-    line-height: 1.2em;
-    text-decoration: none;
-    color: var(--primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  #banner-1881 .cs-link:last-of-type {
-    /* remove the chevron on the last list item */
-  }
-  #banner-1881 .cs-link:last-of-type::after {
-    display: none;
-  }
-  #banner-1881 .cs-link:after {
-    /* chevron */
-    content: "";
-    width: 0.4375rem;
-    height: 0.75rem;
-    margin: 0 1rem;
-    background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-right-arrow-2.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: block;
-    position: relative;
-  }
-  #banner-1881 .cs-link.cs-active {
-    color: var(--bodyTextColor);
-  }
-  #banner-1881 .cs-background {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  #banner-1881 .cs-background:before {
-    /* background color overlay */
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #FAF6F2;
-    opacity: 0.84;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  #banner-1881 .cs-background img {
-    width: 100%;
-    height: 100%;
-    /* Makes img tag act as a background image */
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #banner-1881 .cs-graphic {
-    /* 123px - 227px */
-    width: clamp(7.71rem, 22.5vw, 14.19rem);
-    height: auto;
-    position: absolute;
-    top: 1.25rem;
-    right: -2rem;
-    z-index: -1;
-  }
-}
-                                
 </STYLE>
 
 <div id="banner-1881" data-aos="fade-in">
-    <div class="cs-container">
-        <span class="cs-title">Our Services</span>
-        
-    </div>
+  <div class="cs-container">
+    <span class="cs-title">Our Services</span>
+    <P class="cs-text" style="text-align: left;"> Roofing, Siding, Windows, Decks, and Dumpster Rentals. Backed by a minimum 10 year labor warranty and a 100% satisfaction guarantee. </P>
+
+  </div>
 
 </div>
-                                
