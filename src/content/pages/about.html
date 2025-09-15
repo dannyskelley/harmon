@@ -1,0 +1,42 @@
+---
+title: 'About Us | Fleur de Lis Salon – Professional Haircare in Port orange, FL'
+description: 'The story behind Fleur de Lis Salon. Our expert stylists provide precision cuts, color, and luxury treatments with care in Port orange, FL.'
+permalink: "/about-us/"
+tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+
+
+    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+    <!-- {% include "components/home-schema.html" %} -->
+{% endblock %}
+
+{% block body %}
+{% include 'components/content_about.html' %}
+
+
+
+
+
+
+
+{% include 'components/2.html' %}
+
+
+
+
+{% include 'sections/steps.html' %} 
+
+{% include 'sections/testimonial.html' %}
+
+
+
+
+
+{% include 'sections/cta.html' %}
+
+{% endblock %}
