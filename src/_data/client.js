@@ -1,6 +1,6 @@
 module.exports = {
     name: "Infinity Home Solutions LLC",
-    email: "christina@infinityhomesolutionsllc.com",
+    email: "Homesolutions.infinity@gmail.com",
     phoneForTel: "(866)705-8388",
     phoneFormatted: "(866)705-8388",
     address: {
