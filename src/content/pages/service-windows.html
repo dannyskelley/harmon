@@ -40,17 +40,16 @@ tags: "sitemap"
     overflow: hidden;
     position: relative;
     z-index: 1;
-    background-color: #FAF6F2;
   }
   #service-page-banner .cs-container { text-align: left; width: 100%; max-width: 75rem; margin: auto; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 0.75rem; }
-  #service-page-banner .cs-int-title { font-size: clamp(2.4375rem, 6.4vw, 3.8125rem); font-weight: 900; line-height: 1.2em; margin: 0; color: var(--headerColor); }
+  #service-page-banner .cs-int-title { font-size: clamp(2.4375rem, 6.4vw, 3.8125rem); font-weight: 900; line-height: 1.2em; margin: 0; color: #fff; }
   #service-page-banner .cs-breadcrumbs { display: flex; align-items: center; }
-  #service-page-banner .cs-link { font-size: 1rem; text-decoration: none; color: var(--primary); display: flex; align-items: center; }
+  #service-page-banner .cs-link { font-size: 1rem; text-decoration: none; color: #ddd; display: flex; align-items: center; }
   #service-page-banner .cs-link:after { content: ""; width: 0.4375rem; height: 0.75rem; margin: 0 1rem; background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-right-arrow-2.svg"); background-size: contain; background-repeat: no-repeat; display: block; }
   #service-page-banner .cs-link:last-of-type:after { display: none; }
-  #service-page-banner .cs-link.cs-active { color: var(--bodyTextColor); }
+  #service-page-banner .cs-link.cs-active { color: #bbb; }
   #service-page-banner .cs-background { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; }
-  #service-page-banner .cs-background:before { content: ""; width: 100%; height: 100%; background: #FAF6F2; opacity: 0.88; position: absolute; top: 0; left: 0; z-index: 1; }
+  #service-page-banner .cs-background:before { content: ""; width: 100%; height: 100%; background: #1a1a1a; opacity: 0.55; position: absolute; top: 0; left: 0; z-index: 1; }
   #service-page-banner .cs-background img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
 
   #windows-content { padding: var(--sectionPadding); background: #fff; }
@@ -67,6 +66,13 @@ tags: "sitemap"
   #windows-content .cs-cta { background: var(--primary); color: #fff; padding: 3rem 2rem; border-radius: 8px; text-align: center; margin: 3rem 0 0; }
   #windows-content .cs-cta h2 { color: #fff; margin: 0 0 1rem; }
   #windows-content .cs-cta p { color: #fff; opacity: 0.9; max-width: 600px; margin: 0 auto 1.5rem; }
+  .cs-featured-img { width: 100%; height: clamp(18rem, 40vw, 28rem); object-fit: cover; border-radius: 8px; margin: 2rem 0; display: block; }
+  .cs-photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .cs-photo-grid img { width: 100%; height: 14rem; object-fit: cover; border-radius: 6px; display: block; }
+  @media (min-width: 48rem) { .cs-photo-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .cs-side-by-side { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; margin: 2rem 0; }
+  @media (min-width: 48rem) { .cs-side-by-side { grid-template-columns: 1fr 1fr; } }
+  .cs-side-by-side img { width: 100%; height: clamp(16rem, 30vw, 24rem); object-fit: cover; border-radius: 8px; }
 </style>
 
 <div id="service-page-banner" data-aos="fade-in">
@@ -79,7 +85,7 @@ tags: "sitemap"
     </div>
   </div>
   <picture class="cs-background">
-    <img loading="eager" decoding="async" src="/assets/images/bg.jpg" alt="Michigan window replacement" width="1920" height="1200" aria-hidden="true">
+    <img loading="eager" decoding="async" src="/assets/images/home6.jpg" alt="Michigan home window replacement" width="1920" height="1200" aria-hidden="true">
   </picture>
 </div>
 
@@ -89,6 +95,8 @@ tags: "sitemap"
     <h2>Michigan Window Replacement — Energy-Efficient, Professionally Installed</h2>
     <p>Are your windows drafty, hard to open, foggy between the panes, or just old? Replacement windows from Infinity Home Solutions will transform how your home feels — warmer in winter, cooler in summer, quieter year-round, and more beautiful from the street. We offer a wide selection of window styles and glass options, all professionally installed and backed by a 10-year labor warranty.</p>
     <p>Drafty windows are one of the leading causes of high energy bills in Michigan homes. Modern replacement windows with Low-E glass and argon gas fill dramatically reduce heat transfer, keeping your heated or cooled air inside where it belongs.</p>
+
+    <img src="/assets/images/2.jpg" alt="New energy-efficient windows installed on Michigan home" class="cs-featured-img" loading="lazy" width="1200" height="600">
 
     <h2>Window Styles We Install</h2>
     <div class="cs-two-col">
@@ -118,15 +126,26 @@ tags: "sitemap"
       </div>
     </div>
 
-    <h2>Glass & Efficiency Options</h2>
-    <ul>
-      <li>Low-E (Low Emissivity) glass coating — reflects heat back in winter, keeps it out in summer</li>
-      <li>Argon gas fill between panes — significantly reduces heat transfer</li>
-      <li>ENERGY STAR® certified options available</li>
-      <li>Triple-pane glass for maximum insulation</li>
-      <li>Laminated glass for security and noise reduction</li>
-      <li>Tempered safety glass for bathrooms and low openings</li>
-    </ul>
+    <div class="cs-side-by-side">
+      <div>
+        <h2>Glass & Efficiency Options</h2>
+        <ul>
+          <li>Low-E (Low Emissivity) glass coating — reflects heat back in winter, keeps it out in summer</li>
+          <li>Argon gas fill between panes — significantly reduces heat transfer</li>
+          <li>ENERGY STAR® certified options available</li>
+          <li>Triple-pane glass for maximum insulation</li>
+          <li>Laminated glass for security and noise reduction</li>
+          <li>Tempered safety glass for bathrooms and low openings</li>
+        </ul>
+      </div>
+      <img src="/assets/images/home6.jpg" alt="New windows on Michigan home exterior" loading="lazy" width="600" height="450">
+    </div>
+
+    <div class="cs-photo-grid">
+      <img src="/assets/images/home1.jpg" alt="Window and exterior detail on Michigan home" loading="lazy" width="400" height="300">
+      <img src="/assets/images/home6.jpg" alt="Finished window replacement project" loading="lazy" width="400" height="300">
+      <img src="/assets/images/home3.jpg" alt="Home exterior windows and siding Michigan" loading="lazy" width="400" height="300">
+    </div>
 
     <h2>Serving Metro Detroit & Southeast Michigan</h2>
     <p>We install replacement windows throughout Southgate, Wyandotte, Trenton, Taylor, Lincoln Park, Allen Park, Dearborn, Dearborn Heights, Riverview, Woodhaven, Flat Rock, Monroe, and all surrounding communities across Southeast Michigan.</p>

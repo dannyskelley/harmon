@@ -42,32 +42,19 @@ tags: "sitemap"
     z-index: 1;
     background-color: #FAF6F2;
   }
-  #service-page-banner .cs-container {
-    text-align: left;
-    width: 100%;
-    max-width: 75rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-  #service-page-banner .cs-int-title {
-    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-    font-weight: 900;
-    line-height: 1.2em;
-    margin: 0;
-    color: var(--headerColor);
-  }
+  #service-page-banner .cs-container { text-align: left; width: 100%; max-width: 75rem; margin: auto; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 0.75rem; }
+  #service-page-banner .cs-int-title { font-size: clamp(2.4375rem, 6.4vw, 3.8125rem); font-weight: 900; line-height: 1.2em; margin: 0; color: var(--headerColor); }
   #service-page-banner .cs-breadcrumbs { display: flex; align-items: center; }
   #service-page-banner .cs-link { font-size: 1rem; text-decoration: none; color: var(--primary); display: flex; align-items: center; }
   #service-page-banner .cs-link:after { content: ""; width: 0.4375rem; height: 0.75rem; margin: 0 1rem; background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-right-arrow-2.svg"); background-size: contain; background-repeat: no-repeat; display: block; }
   #service-page-banner .cs-link:last-of-type:after { display: none; }
   #service-page-banner .cs-link.cs-active { color: var(--bodyTextColor); }
   #service-page-banner .cs-background { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; }
-  #service-page-banner .cs-background:before { content: ""; width: 100%; height: 100%; background: #FAF6F2; opacity: 0.88; position: absolute; top: 0; left: 0; z-index: 1; }
+  #service-page-banner .cs-background:before { content: ""; width: 100%; height: 100%; background: #1a1a1a; opacity: 0.55; position: absolute; top: 0; left: 0; z-index: 1; }
   #service-page-banner .cs-background img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
+  #service-page-banner .cs-int-title { color: #fff; }
+  #service-page-banner .cs-link { color: #ddd; }
+  #service-page-banner .cs-link.cs-active { color: #bbb; }
 
   #roofing-content { padding: var(--sectionPadding); background: #fff; }
   #roofing-content .cs-container { width: 100%; max-width: 75rem; margin: auto; }
@@ -83,6 +70,13 @@ tags: "sitemap"
   #roofing-content .cs-cta { background: var(--primary); color: #fff; padding: 3rem 2rem; border-radius: 8px; text-align: center; margin: 3rem 0 0; }
   #roofing-content .cs-cta h2 { color: #fff; margin: 0 0 1rem; }
   #roofing-content .cs-cta p { color: #fff; opacity: 0.9; max-width: 600px; margin: 0 auto 1.5rem; }
+  .cs-featured-img { width: 100%; height: clamp(18rem, 40vw, 28rem); object-fit: cover; border-radius: 8px; margin: 2rem 0; display: block; }
+  .cs-photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .cs-photo-grid img { width: 100%; height: 14rem; object-fit: cover; border-radius: 6px; display: block; }
+  @media (min-width: 48rem) { .cs-photo-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .cs-side-by-side { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; margin: 2rem 0; }
+  @media (min-width: 48rem) { .cs-side-by-side { grid-template-columns: 1fr 1fr; } }
+  .cs-side-by-side img { width: 100%; height: clamp(16rem, 30vw, 24rem); object-fit: cover; border-radius: 8px; }
 </style>
 
 <div id="service-page-banner" data-aos="fade-in">
@@ -95,7 +89,7 @@ tags: "sitemap"
     </div>
   </div>
   <picture class="cs-background">
-    <img loading="eager" decoding="async" src="/assets/images/bg.jpg" alt="Michigan roofing contractor" width="1920" height="1200" aria-hidden="true">
+    <img loading="eager" decoding="async" src="/assets/images/home4.jpg" alt="Michigan roof replacement project" width="1920" height="1200" aria-hidden="true">
   </picture>
 </div>
 
@@ -105,6 +99,8 @@ tags: "sitemap"
     <h2>Michigan Roofing Contractor — Licensed, Insured & Local</h2>
     <p>Infinity Home Solutions is one of Metro Detroit's most trusted roofing contractors. We've helped thousands of Michigan homeowners protect their homes with durable, high-quality roofing systems installed by experienced crews. Whether you need a complete roof replacement, storm damage repair, or a simple inspection, we're here to help — with honest pricing and a 10-year labor warranty.</p>
     <p>Michigan weather is tough on roofs. Ice dams, heavy snow loads, hailstorms, and temperature extremes all take a toll. Our roofing systems are specifically chosen and installed to handle everything Michigan winters — and summers — throw at them.</p>
+
+    <img src="/assets/images/1.jpg" alt="Completed roofing project in Metro Detroit Michigan" class="cs-featured-img" loading="lazy" width="1200" height="600">
 
     <h2>Our Roofing Services</h2>
     <div class="cs-two-col">
@@ -126,17 +122,28 @@ tags: "sitemap"
       </div>
     </div>
 
-    <h2>Roofing Products We Install</h2>
-    <ul>
-      <li>Architectural / dimensional asphalt shingles</li>
-      <li>Designer and premium shingles</li>
-      <li>Standing seam metal roofing</li>
-      <li>Ice & water shield (full coverage for Michigan winters)</li>
-      <li>Synthetic underlayment</li>
-      <li>Ridge vent systems for proper attic ventilation</li>
-      <li>Drip edge and step flashing</li>
-      <li>Pipe boots and penetration flashing</li>
-    </ul>
+    <div class="cs-side-by-side">
+      <div>
+        <h2>Roofing Products We Install</h2>
+        <ul>
+          <li>Architectural / dimensional asphalt shingles</li>
+          <li>Designer and premium shingles</li>
+          <li>Standing seam metal roofing</li>
+          <li>Ice & water shield (full coverage for Michigan winters)</li>
+          <li>Synthetic underlayment</li>
+          <li>Ridge vent systems for proper attic ventilation</li>
+          <li>Drip edge and step flashing</li>
+          <li>Pipe boots and penetration flashing</li>
+        </ul>
+      </div>
+      <img src="/assets/images/home2.jpg" alt="Michigan roof close-up with quality shingles" loading="lazy" width="600" height="450">
+    </div>
+
+    <div class="cs-photo-grid">
+      <img src="/assets/images/home4.jpg" alt="New roof installation Metro Detroit" loading="lazy" width="400" height="300">
+      <img src="/assets/images/home3.jpg" alt="Michigan roofing and siding project" loading="lazy" width="400" height="300">
+      <img src="/assets/images/home6.jpg" alt="Finished roofing project Southeast Michigan" loading="lazy" width="400" height="300">
+    </div>
 
     <h2>Serving Metro Detroit & Southeast Michigan</h2>
     <p>We provide roofing services throughout the greater Metro Detroit area, including Southgate, Wyandotte, Trenton, Taylor, Lincoln Park, Allen Park, Dearborn, Dearborn Heights, Riverview, Woodhaven, Flat Rock, Monroe, and surrounding communities. If you're in Southeast Michigan, we can help.</p>

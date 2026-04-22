@@ -40,17 +40,16 @@ tags: "sitemap"
     overflow: hidden;
     position: relative;
     z-index: 1;
-    background-color: #FAF6F2;
   }
   #service-page-banner .cs-container { text-align: left; width: 100%; max-width: 75rem; margin: auto; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 0.75rem; }
-  #service-page-banner .cs-int-title { font-size: clamp(2.4375rem, 6.4vw, 3.8125rem); font-weight: 900; line-height: 1.2em; margin: 0; color: var(--headerColor); }
+  #service-page-banner .cs-int-title { font-size: clamp(2.4375rem, 6.4vw, 3.8125rem); font-weight: 900; line-height: 1.2em; margin: 0; color: #fff; }
   #service-page-banner .cs-breadcrumbs { display: flex; align-items: center; }
-  #service-page-banner .cs-link { font-size: 1rem; text-decoration: none; color: var(--primary); display: flex; align-items: center; }
+  #service-page-banner .cs-link { font-size: 1rem; text-decoration: none; color: #ddd; display: flex; align-items: center; }
   #service-page-banner .cs-link:after { content: ""; width: 0.4375rem; height: 0.75rem; margin: 0 1rem; background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-right-arrow-2.svg"); background-size: contain; background-repeat: no-repeat; display: block; }
   #service-page-banner .cs-link:last-of-type:after { display: none; }
-  #service-page-banner .cs-link.cs-active { color: var(--bodyTextColor); }
+  #service-page-banner .cs-link.cs-active { color: #bbb; }
   #service-page-banner .cs-background { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; }
-  #service-page-banner .cs-background:before { content: ""; width: 100%; height: 100%; background: #FAF6F2; opacity: 0.88; position: absolute; top: 0; left: 0; z-index: 1; }
+  #service-page-banner .cs-background:before { content: ""; width: 100%; height: 100%; background: #1a1a1a; opacity: 0.55; position: absolute; top: 0; left: 0; z-index: 1; }
   #service-page-banner .cs-background img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
 
   #insulation-content { padding: var(--sectionPadding); background: #fff; }
@@ -67,6 +66,13 @@ tags: "sitemap"
   #insulation-content .cs-cta { background: var(--primary); color: #fff; padding: 3rem 2rem; border-radius: 8px; text-align: center; margin: 3rem 0 0; }
   #insulation-content .cs-cta h2 { color: #fff; margin: 0 0 1rem; }
   #insulation-content .cs-cta p { color: #fff; opacity: 0.9; max-width: 600px; margin: 0 auto 1.5rem; }
+  .cs-featured-img { width: 100%; height: clamp(18rem, 40vw, 28rem); object-fit: cover; border-radius: 8px; margin: 2rem 0; display: block; }
+  .cs-photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .cs-photo-grid img { width: 100%; height: 14rem; object-fit: cover; border-radius: 6px; display: block; }
+  @media (min-width: 48rem) { .cs-photo-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .cs-side-by-side { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; margin: 2rem 0; }
+  @media (min-width: 48rem) { .cs-side-by-side { grid-template-columns: 1fr 1fr; } }
+  .cs-side-by-side img { width: 100%; height: clamp(16rem, 30vw, 24rem); object-fit: cover; border-radius: 8px; }
 </style>
 
 <div id="service-page-banner" data-aos="fade-in">
@@ -79,7 +85,7 @@ tags: "sitemap"
     </div>
   </div>
   <picture class="cs-background">
-    <img loading="eager" decoding="async" src="/assets/images/bg.jpg" alt="Michigan home insulation contractor" width="1920" height="1200" aria-hidden="true">
+    <img loading="eager" decoding="async" src="/assets/images/bg1.jpg" alt="Michigan home insulation contractor" width="1920" height="1200" aria-hidden="true">
   </picture>
 </div>
 
@@ -89,6 +95,8 @@ tags: "sitemap"
     <h2>Michigan Insulation Contractor — Reduce Energy Bills & Improve Comfort</h2>
     <p>If your Michigan home is hard to heat in winter or cool in summer, or if your energy bills seem unusually high, inadequate insulation is often the culprit. Infinity Home Solutions provides professional insulation installation for attics, walls, crawl spaces, and basements across Metro Detroit and Southeast Michigan.</p>
     <p>Michigan's climate — with winters that regularly dip below 0°F and humid summers — demands exceptional insulation performance. Our team installs the right materials in the right places to give your home maximum thermal protection year-round.</p>
+
+    <img src="/assets/images/bg1.jpg" alt="Michigan home ready for insulation upgrade" class="cs-featured-img" loading="lazy" width="1200" height="600">
 
     <h2>Our Insulation Services</h2>
     <div class="cs-two-col">
@@ -118,14 +126,25 @@ tags: "sitemap"
       </div>
     </div>
 
-    <h2>Insulation Types We Install</h2>
-    <ul>
-      <li><strong>Blown-in fiberglass</strong> — ideal for attics and existing wall cavities</li>
-      <li><strong>Blown-in cellulose</strong> — eco-friendly option with excellent thermal performance</li>
-      <li><strong>Fiberglass batt insulation</strong> — for open wall and floor joist cavities</li>
-      <li><strong>Rigid foam board</strong> — used under siding for continuous insulation</li>
-      <li><strong>Vapor barriers</strong> — crawl space moisture control</li>
-    </ul>
+    <div class="cs-side-by-side">
+      <div>
+        <h2>Insulation Types We Install</h2>
+        <ul>
+          <li><strong>Blown-in fiberglass</strong> — ideal for attics and existing wall cavities</li>
+          <li><strong>Blown-in cellulose</strong> — eco-friendly option with excellent thermal performance</li>
+          <li><strong>Fiberglass batt insulation</strong> — for open wall and floor joist cavities</li>
+          <li><strong>Rigid foam board</strong> — used under siding for continuous insulation</li>
+          <li><strong>Vapor barriers</strong> — crawl space moisture control</li>
+        </ul>
+      </div>
+      <img src="/assets/images/bg2.jpg" alt="Michigan home exterior — insulation and energy upgrades" loading="lazy" width="600" height="450">
+    </div>
+
+    <div class="cs-photo-grid">
+      <img src="/assets/images/home2.jpg" alt="Michigan home roof and attic insulation project" loading="lazy" width="400" height="300">
+      <img src="/assets/images/bg3.jpg" alt="Energy efficient Michigan home" loading="lazy" width="400" height="300">
+      <img src="/assets/images/home4.jpg" alt="Home roof with proper attic insulation Michigan" loading="lazy" width="400" height="300">
+    </div>
 
     <h2>How Proper Insulation Saves Michigan Homeowners Money</h2>
     <p>According to the U.S. Department of Energy, homeowners can save an average of 15% on heating and cooling costs by properly air sealing and insulating their homes. For a Michigan homeowner spending $2,000/year on heating and cooling, that's $300 or more back in your pocket every year. Over a 10-year period, that's $3,000+ in savings — and new insulation typically pays for itself in 3–5 years.</p>
