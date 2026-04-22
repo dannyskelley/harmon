@@ -1,7 +1,14 @@
 # Infinity Home Solutions LLC - Website
 
 ## Project Overview
-A professional static website for Infinity Home Solutions LLC, a real estate and home services company based in Southgate, Michigan (Metro Detroit area).
+A professional static website for Infinity Home Solutions LLC, a family-owned Michigan contractor based in Southgate (14350 Eureka Rd, Southgate, MI 48195). Phone: (866) 705-8388. Services: roofing, siding, windows, insulation.
+
+## Real Business Facts (from Facebook, do not invent claims)
+- Roofs starting at $6,900; financing available for qualified homeowners
+- Uses Owens Corning Duration shingles (Brownwood, Slate Stone Gray, Aged Copper)
+- Projects confirmed in: Shelby Township, Midland, Metro Detroit area
+- Category: Home Improvement
+- No claim of "thousands" or "100+ years experience" — removed as unverified
 
 ## Tech Stack
 - **Static Site Generator**: Eleventy (11ty) v3.1.1
