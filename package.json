@@ -5,9 +5,9 @@
     "main": "index.js",
     "scripts": {
         "watch:cms": "npx decap-server",
-        "watch:eleventy": "cross-env ELEVENTY_ENV=DEV eleventy --serve",
+        "watch:eleventy": "cross-env ELEVENTY_ENV=DEV eleventy --serve --port=5000",
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
-        "start": "run-p watch:*",
+        "start": "cross-env ELEVENTY_ENV=DEV eleventy --serve --port=5000",
         "build": "run-s build:*"
     },
     "repository": {

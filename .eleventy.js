@@ -115,6 +115,15 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
     // ═════════════════════════════════════════════════════════════════════════
+    // DEV SERVER CONFIGURATION
+    // ═════════════════════════════════════════════════════════════════════════
+
+    eleventyConfig.setServerOptions({
+        port: 5000,
+        host: "0.0.0.0",
+    });
+
+    // ═════════════════════════════════════════════════════════════════════════
     // BUILD CONFIGURATION
     // Define input/output directories and template engine
     // ═════════════════════════════════════════════════════════════════════════
