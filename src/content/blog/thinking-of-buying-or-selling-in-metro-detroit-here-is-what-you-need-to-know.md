@@ -66,11 +66,11 @@ Providence Properties is based in **Southgate, MI**, and serves clients across M
 
 Here are just a few recent closings that show the breadth of our service:
 
-* 5123 Chestershire Dr, West Bloomfield – $365,000 – Buyer  
-* 13453 Superior St, Southgate – $195,000 – Buyer and Seller  
-* 2712 N Main St, Royal Oak – $291,000 – Seller  
-* 2276 22nd St, Wyandotte – $303,000 – Buyer  
-* 18210 Santa Rosa Dr, Detroit – $250,000 – Seller  
+* 5123 Chestershire Dr, West Bloomfield: $365,000 (Buyer)
+* 13453 Superior St, Southgate: $195,000 (Buyer and Seller)
+* 2712 N Main St, Royal Oak: $291,000 (Seller)
+* 2276 22nd St, Wyandotte: $303,000 (Buyer)
+* 18210 Santa Rosa Dr, Detroit: $250,000 (Seller)
 
 Each closing reflects the strategy, negotiation, and hard work that Victoria brings to every deal.
 
@@ -81,10 +81,10 @@ Each closing reflects the strategy, negotiation, and hard work that Victoria bri
 Our clients consistently mention the same themes: fast results, unmatched communication, and expert‑level support.
 
 > “Victoria helped us sell our first home and buy our dream home. She listened, she moved fast, and she delivered. We’ll never use another agent.”\
-> — Recent Client in Allen Park
+> Recent Client in Allen Park
 >
 > “Even as a former mortgage loan officer, I was blown away by Victoria’s network and negotiation power. She helped me secure a better loan and still got us concessions on the home.”\
-> — Buyer in Riverview
+> Buyer in Riverview
 
 ## Ready to Make Your Move?
 
