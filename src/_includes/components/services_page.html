@@ -8,7 +8,6 @@
         #content-page-852 {
             padding: var(--sectionPadding);
             background-color: #fff;
-            /* clips the wave background from causing overflow issues when it goes off screen */
             overflow: hidden;
             position: relative;
             z-index: 1;
@@ -21,19 +20,15 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* 48px - 64px */
             gap: clamp(3rem, 6vw, 4rem);
             position: relative;
         }
 
         #content-page-852 .cs-content {
-            /* set text align to left if content needs to be left aligned */
             text-align: left;
             width: 100%;
-
             display: flex;
             flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
             align-items: flex-start;
         }
 
@@ -48,7 +43,6 @@
             color: var(--headerColor);
             position: relative;
             padding-top: 50px;
-            ;
         }
 
         #content-page-852 h2,
@@ -72,22 +66,8 @@
             color: var(--primary);
         }
 
-        #content-page-852 h4,
-        #content-page-852 h5,
-        #content-page-852 h6 {
-            font-size: 1.25rem;
-        }
-
         #content-page-852 .cs-button-solid {
             margin-bottom: 2rem;
-        }
-
-        #content-page-852 .cs-no-margin {
-            margin: 0;
-        }
-
-        #content-page-852 .cs-color {
-            color: var(--primary);
         }
 
         #content-page-852 p {
@@ -127,7 +107,6 @@
         }
 
         #content-page-852 ul li:before {
-            /* custom list bullet */
             content: "";
             width: 3px;
             height: 3px;
@@ -145,49 +124,6 @@
             height: auto;
             display: block;
         }
-
-        #content-page-852 .cs-image-group {
-            width: 50%;
-            max-width: 27.0625rem;
-            display: none;
-            flex-direction: column;
-            gap: 1.25rem;
-            position: relative;
-        }
-
-        #content-page-852 .cs-image-group:after {
-            /* colored box */
-            content: "";
-            width: 100%;
-            /* 177px - 258px */
-            height: clamp(11.0625rem, 19vw, 16.125rem);
-            background: var(--primary);
-            border-radius: 6.25rem 0 6.25rem;
-            opacity: 0.15;
-            display: block;
-        }
-
-        #content-page-852 .cs-picture {
-            width: 100%;
-            /* 300px - 520px */
-            height: clamp(18.75rem, 40vw, 32.5rem);
-            box-shadow: 0px 3.3478px 50.2169px rgba(0, 0, 0, 0.16);
-            /* 125px - 200px */
-            border-radius: 0 clamp(7.8125rem, 15vw, 12.5rem) 0 clamp(7.8125rem, 15vw, 12.5rem);
-            /* prevents border from affecting height and width */
-            box-sizing: border-box;
-            /* clips img tag corners */
-            overflow: hidden;
-            display: block;
-            position: relative;
-        }
-
-        #content-page-852 .cs-picture img {
-            width: 100%;
-            height: 100%;
-            /* makes it act like a background image */
-            object-fit: cover;
-        }
     }
 
     /* Tablet - 768px */
@@ -200,23 +136,19 @@
 
         #content-page-852 .cs-content {
             flex: none;
-           
             margin: auto;
-            /* sens it to the right in the 2nd position */
             order: 2;
-        }
-
-        #content-page-852 .cs-image-group {
-            display: flex;
         }
     }
 </style>
 <section id="content-page-852">
   <div class="cs-container">
     <div class="cs-content">
+
       <!-- Roofing -->
-      <h3 class="cs-title" id="roofing">Roofing</h3>
-      <p>Durable, weather-ready roofs built for Michigan’s four seasons. We install premium shingles and metal systems with clean tear-offs, proper ventilation, and code-correct flashing.</p>
+      <h2 class="cs-title" id="roofing">Roofing</h2>
+      <p>Durable, weather-ready roofs built for Michigan's four seasons. We install premium shingles and metal roofing systems with clean tear-offs, proper ventilation, and code-correct flashing. Whether you need a full roof replacement or repairs after storm damage, Infinity Home Solutions delivers reliable results backed by a 10-year labor warranty.</p>
+      <p>Our licensed roofing crews serve homeowners across Metro Detroit, Southgate, Wyandotte, Trenton, Taylor, and all of Southeast Michigan. We work with leading manufacturers to ensure your new roof lasts for decades.</p>
       <ul>
         <li>Full roof replacement & re-roofing</li>
         <li>Asphalt shingles (architectural & designer)</li>
@@ -224,12 +156,14 @@
         <li>Ice & water shield, drip edge, ridge vent</li>
         <li>Storm damage inspections & honest assessments</li>
         <li>10+ year labor warranty, manufacturer warranties</li>
+        <li>Same-day storm inspections available</li>
       </ul>
       <div style="margin:0 0 60px;">{% include 'components/cta_button.html' %}</div>
 
       <!-- Siding -->
-      <h3 class="cs-title" id="siding">Siding</h3>
-      <p>Improve curb appeal and protection with low-maintenance siding installed by a detail-driven crew. We help you choose styles and colors that suit your home and budget.</p>
+      <h2 class="cs-title" id="siding">Siding</h2>
+      <p>Improve your home's curb appeal and weather protection with professional siding installation. We help Michigan homeowners choose styles, colors, and materials that suit their home and budget, then install them with meticulous attention to detail.</p>
+      <p>Our siding crews are experienced with all major siding products and install with proper housewrap and moisture management systems to keep your home dry and energy efficient for years to come. We serve all of Metro Detroit and Southeast Michigan.</p>
       <ul>
         <li>Vinyl, composite, and insulated siding</li>
         <li>Fascia, soffit, and trim packages</li>
@@ -237,55 +171,55 @@
         <li>Color & profile recommendations</li>
         <li>Repairs, replacements, and new installs</li>
         <li>Warranty-backed workmanship</li>
+        <li>Full exterior makeovers available</li>
       </ul>
       <div style="margin:0 0 60px;">{% include 'components/cta_button.html' %}</div>
 
       <!-- Windows -->
-      <h3 class="cs-title" id="windows">Windows</h3>
-      <p>Energy-efficient replacement windows that cut drafts, reduce noise, and look great. Professionally measured and installed for a tight, long-lasting fit.</p>
+      <h2 class="cs-title" id="windows">Windows</h2>
+      <p>Energy-efficient replacement windows that cut drafts, reduce noise, and look great. Every window is professionally measured and installed for a tight, long-lasting fit that helps lower your energy bills year-round.</p>
+      <p>We carry a wide selection of window styles, glass options, and frame colors to match any Michigan home. Our experienced installers ensure a proper seal and a clean, finished look inside and out.</p>
       <ul>
         <li>Double-hung, casement, slider, picture, bay/bow</li>
         <li>Low-E / argon glass, ENERGY STAR® options</li>
         <li>Custom sizing and trim finishes</li>
         <li>Clean removals and disposal</li>
         <li>Warranty on product and installation</li>
+        <li>Improved home comfort and noise reduction</li>
+        <li>Increased home resale value</li>
       </ul>
       <div style="margin:0 0 60px;">{% include 'components/cta_button.html' %}</div>
 
-      <!-- Decks -->
-      <h3 class="cs-title" id="decks">Decks</h3>
-      <p>Safe, beautiful outdoor living spaces built for Michigan gatherings. From classic pressure-treated lumber to long-life composites, we design and build decks that last.</p>
+      <!-- Insulation -->
+      <h2 class="cs-title" id="insulation">Insulation</h2>
+      <p>Michigan winters demand a well-insulated home. Proper insulation reduces heating and cooling costs, improves comfort, and protects your home from moisture damage. Infinity Home Solutions installs attic, wall, and crawl space insulation with quality materials designed for Michigan's extreme temperature swings.</p>
+      <p>Whether you're upgrading an older home or adding insulation to a new build, our team will assess your home's needs and recommend the best solution to maximize comfort and energy savings all year long.</p>
       <ul>
-        <li>New builds, replacements, and extensions</li>
-        <li>Pressure-treated or composite decking</li>
-        <li>Railings, stairs, lighting, and skirting</li>
-        <li>Permitting and code-compliant framing</li>
-        <li>Repair and resurfacing options</li>
-      </ul>
-      <div style="margin:0 0 60px;">{% include 'components/cta_button.html' %}</div>
-
-      <!-- Dumpster Rentals -->
-      <h3 class="cs-title" id="dumpster-rentals">Dumpster Rentals</h3>
-      <p>Reliable, affordable dumpsters for remodels, roofing tear-offs, cleanouts, and jobsite debris. Easy scheduling, prompt drop-off, and on-time pickup.</p>
-      <ul>
-        <li>Common sizes for home projects and contractors</li>
-        <li>Transparent, flat-rate pricing</li>
-        <li>Driveway-safe placement and protection</li>
-        <li>Flexible rental periods</li>
-        <li>Great for roofing, siding, remodels, and yard waste</li>
+        <li>Attic insulation (blown-in and batt)</li>
+        <li>Wall and exterior insulation</li>
+        <li>Crawl space insulation and vapor barriers</li>
+        <li>Air sealing for maximum efficiency</li>
+        <li>Insulation removal and replacement</li>
+        <li>Energy savings assessments</li>
+        <li>Reduces heating & cooling costs significantly</li>
       </ul>
       <div style="margin:0 0 60px;">{% include 'components/cta_button.html' %}</div>
 
       <!-- Why Choose -->
-      <h3 class="cs-title" id="why-choose">Why Choose Infinity Home Solutions?</h3>
+      <h2 class="cs-title" id="why-choose">Why Choose Infinity Home Solutions?</h2>
       <p>
-        • Family owned, serving Michigan homeowners with integrity<br>
-        • Licensed & insured crews with 100+ years of combined experience<br>
-        • Fair pricing, clear communication, and clean jobsites<br>
-        • 10+ year labor warranty and 100% satisfaction guarantee
+        Infinity Home Solutions is a family-owned Michigan contractor with a reputation built on honest work and quality results. We serve homeowners across Metro Detroit and Southeast Michigan with a commitment to fair pricing, clean jobsites, and communication you can count on.
       </p>
+      <ul>
+        <li>Licensed & insured — fully compliant Michigan contractor</li>
+        <li>100+ years of combined crew experience</li>
+        <li>10-year labor warranty on all major services</li>
+        <li>100% satisfaction guarantee</li>
+        <li>3,000+ satisfied Michigan homeowners served</li>
+        <li>Free, no-obligation estimates</li>
+        <li>Fast response — same or next day estimates available</li>
+      </ul>
       <div style="margin:0 0 60px;">{% include 'components/cta_button.html' %}</div>
     </div>
   </div>
 </section>
-
