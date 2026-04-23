@@ -85,86 +85,48 @@
     transform: rotate(45deg);
   }
   #sbsr-2296 .cs-image-group {
-    /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
-    font-size: min(1.98vw, .802rem);
-    /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
-    width: 46.125em;
-min-height: 300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.75rem;
     order: -1;
-    position: relative;
-    z-index: 1;
-    /* prevents flexbox from squishing it */
-    flex: none;
   }
   #sbsr-2296 .cs-picture {
-    width: auto;
-height: auto;
-    border: 1em solid #e7e7e8;
-    box-sizing: border-box;
     display: block;
+    overflow: hidden;
+    border-radius: 6px;
   }
   #sbsr-2296 .cs-picture img {
     width: 100%;
-height: 100%;
+    height: 100%;
     object-fit: cover;
-    top: 0;
-    left: 0;
+    display: block;
   }
   #sbsr-2296 .cs-picture-wrapper1 {
-    width: 25.8125em;
-    height: auto;
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 1rem;
-    position: absolute;
-    top: 0;
-    left: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+  #sbsr-2296 .cs-picture-wrapper1 .cs-picture {
+    height: 100%;
+  }
+  #sbsr-2296 .cs-picture-wrapper1 .cs-picture img {
+    height: 100%;
+    min-height: 18rem;
   }
   #sbsr-2296 .cs-picture-wrapper2 {
-    width: 25.8125em;
-    height:auto;
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 1em;
-    position: absolute;
-    top: 6.25em;
-    right: 0;
-    z-index: -1;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  #sbsr-2296 .cs-picture-wrapper2 .cs-picture img {
+    height: 14rem;
   }
   #sbsr-2296 .cs-picture-wrapper3 {
-    width: 25.75em;
-    min-height: 18.375em;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    position: absolute;
-    top: 16.25em;
-    left: 9.25em;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
-  #sbsr-2296 .cs-tag {
-    /* 14px - 24px */
-    font-size: clamp(0.875rem, 1.5vw, 1.5rem);
-    font-weight: 700;
-    line-height: 1.2em;
-    text-align: center;
-    color: var(--headerColor);
-    display: block;
-    flex: none;
-  }
-  #sbsr-2296 .cs-arrow {
-    width: 9.25em;
-    height: auto;
-    position: absolute;
-  }
-  #sbsr-2296 .cs-arrow-left {
-    bottom: 12.5625em;
-    left: 4.5em;
-    transform: rotate(-120deg);
-  }
-  #sbsr-2296 .cs-arrow-right {
-    right: 7.125em;
-    bottom: 11.0625em;
-    transform: rotate(300deg);
+  #sbsr-2296 .cs-picture-wrapper3 .cs-picture img {
+    height: 14rem;
   }
 }
 /* Tablet - 768px */
@@ -173,10 +135,12 @@ height: 100%;
     max-width: 80rem;
   }
   #sbsr-2296 .cs-image-group {
-    height: auto;
-    min-height: 38.75em;
-  
-}
+    gap: 1rem;
+  }
+  #sbsr-2296 .cs-picture-wrapper2 .cs-picture img,
+  #sbsr-2296 .cs-picture-wrapper3 .cs-picture img {
+    height: 18rem;
+  }
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -185,22 +149,13 @@ height: 100%;
     align-items: stretch;
   }
   #sbsr-2296 .cs-image-group {
-    font-size: min(1.1vw, 1rem);
-    height: auto;
-    min-height: 38.75em;
-    order: initial;
+    width: 45%;
     flex: none;
+    order: initial;
   }
-  #sbsr-2296 .cs-picture-wrapper1 {
-    height: auto;
-
-  }
-  #sbsr-2296 .cs-picture-wrapper2 {
-    height: auto;
-
-  }
-  #sbsr-2296 .cs-picture-wrapper3 .cs-picture {
-    height: auto;
+  #sbsr-2296 .cs-picture-wrapper2 .cs-picture img,
+  #sbsr-2296 .cs-picture-wrapper3 .cs-picture img {
+    height: 20rem;
   }
 }
                                 
