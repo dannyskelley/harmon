@@ -1,6 +1,6 @@
 ---
 title: 'Michigan Roofing Contractor | Roofs Starting at $6,900 | Infinity Home Solutions'
-description: 'Infinity Home Solutions is a licensed Michigan roofing contractor. Roof replacements starting at $6,900. Owens Corning shingles. Financing available. Serving Metro Detroit, Shelby Township, Midland and beyond. Free estimates.'
+description: 'Michigan roofing contractor installing Atlas shingles. Roofs starting at $6,900. Free estimates, financing, and 10-year labor warranty. Metro Detroit and beyond.'
 permalink: "/services/roofing/"
 tags: "sitemap"
 ---
@@ -77,6 +77,35 @@ tags: "sitemap"
   .cs-side-by-side { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; margin: 2rem 0; }
   @media (min-width: 48rem) { .cs-side-by-side { grid-template-columns: 1fr 1fr; } }
   .cs-side-by-side img { width: 100%; height: clamp(16rem, 30vw, 24rem); object-fit: cover; border-radius: 8px; }
+
+  /* ====== Atlas Shingles Section ====== */
+  .atlas-shingle-block { margin: 1rem 0 2.5rem; border: 1px solid #e5e5e5; border-radius: 8px; overflow: hidden; background: #fff; }
+  .atlas-tabs { display: flex; flex-wrap: wrap; gap: 0; background: #f1f3f5; }
+  .atlas-tab { flex: 1 1 auto; min-width: 12rem; padding: 1rem 1.25rem; font-size: 0.95rem; font-weight: 700; color: var(--bodyTextColor); background: #f1f3f5; border: 0; border-bottom: 3px solid transparent; cursor: pointer; transition: background .2s, color .2s, border-color .2s; font-family: var(--fontFamily); text-align: center; }
+  .atlas-tab:hover { background: #e9ecef; color: var(--primary); }
+  .atlas-tab.active { background: #fff; color: var(--primary); border-bottom-color: var(--primary); }
+  .atlas-panel { padding: 1.5rem; }
+  .atlas-panel[hidden] { display: none; }
+  .atlas-intro { font-size: 1rem; line-height: 1.6em; margin: 0 0 1.5rem; color: var(--bodyTextColor); }
+  .atlas-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 48rem) { .atlas-grid { grid-template-columns: 1fr 2fr; } }
+  .atlas-features h3, .atlas-colors h3 { font-size: 1.1rem; font-weight: 800; color: var(--headerColor); margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  .atlas-features ul { padding-left: 1.25rem; margin: 0; gap: 0.4rem; display: flex; flex-direction: column; }
+  .atlas-features ul li { font-size: 0.95rem; line-height: 1.45em; list-style: disc; color: var(--bodyTextColor); }
+  .atlas-swatches { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  @media (min-width: 30rem) { .atlas-swatches { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 48rem) { .atlas-swatches { grid-template-columns: repeat(4, 1fr); } }
+  .atlas-swatch { position: relative; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 4px; border: 1px solid #ddd; cursor: pointer; background: #f5f5f5; }
+  .atlas-swatch img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .25s; }
+  .atlas-swatch:hover img, .atlas-swatch:focus-within img { transform: scale(1.06); }
+  .atlas-swatch-label { position: absolute; left: 0; right: 0; bottom: 0; padding: 0.45rem 0.5rem; background: rgba(0,0,0,0.78); color: #fff; font-size: 0.78rem; font-weight: 600; text-align: center; line-height: 1.2em; opacity: 0; transform: translateY(100%); transition: opacity .2s, transform .2s; pointer-events: none; }
+  .atlas-swatch:hover .atlas-swatch-label, .atlas-swatch:focus-within .atlas-swatch-label { opacity: 1; transform: translateY(0); }
+  .atlas-visualizer-wrap { position: relative; width: 100%; padding-bottom: 62%; height: 0; overflow: hidden; border-radius: 8px; border: 1px solid #e5e5e5; margin: 1rem 0 0.75rem; background: #f8f8f8; }
+  .atlas-visualizer-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+  @media (min-width: 48rem) { .atlas-visualizer-wrap { padding-bottom: 56.25%; } }
+  .atlas-visualizer-fallback { font-size: 0.95rem; }
+  .atlas-visualizer-fallback a { color: var(--primary); font-weight: 700; text-decoration: none; }
+  .atlas-visualizer-fallback a:hover { text-decoration: underline; }
 </style>
 
 <div id="service-page-banner" data-aos="fade-in">
@@ -126,8 +155,10 @@ tags: "sitemap"
       <div>
         <h2>Roofing Products We Install</h2>
         <ul>
+          <li>Atlas Pinnacle&reg; Pristine architectural shingles (Black Shadow, Pewter, Weathered Wood, and more)</li>
+          <li>Atlas StormMaster&reg; Shake Class 4 impact-resistant shingles</li>
+          <li>Atlas Pinnacle&reg; Sun cool-roof solar reflective shingles</li>
           <li>Owens Corning Duration architectural shingles (Brownwood, Slate Stone Gray, Aged Copper, and more)</li>
-          <li>Owens Corning and other premium dimensional asphalt shingles</li>
           <li>Standing seam metal roofing</li>
           <li>Ice and water shield (full coverage for Michigan winters)</li>
           <li>Synthetic underlayment</li>
@@ -167,6 +198,126 @@ tags: "sitemap"
     <p>Roof replacement cost in Michigan depends on the size of your home, the materials chosen, and the complexity of your roof. For most Michigan homes, a complete shingle roof replacement starts at $6,900. Larger homes, steeper pitches, or premium shingles will increase the cost. We provide detailed, itemized estimates at no charge so you know exactly what you're paying for before any work begins.</p>
     <p>Financing is available for qualified homeowners, so you don't have to put off a roof you need.</p>
 
+    <!-- =========== Atlas Shingles Specialty Section =========== -->
+    <h2 id="atlas-shingles">We Specialize in Atlas Shingles</h2>
+    <p>Infinity Home Solutions is proud to install Atlas Roofing shingles on Michigan homes. Atlas asphalt shingles are known for tough, long-lasting performance and bold color choices, with three premium product lines we recommend for Michigan weather: Pinnacle&reg; Pristine, StormMaster&reg; Shake, and Pinnacle&reg; Sun.</p>
+
+    <div class="atlas-shingle-block">
+      <div class="atlas-tabs" role="tablist" aria-label="Atlas Shingle Lines">
+        <button type="button" class="atlas-tab active" data-tab="pristine" role="tab" id="atlas-tab-pristine" aria-controls="atlas-panel-pristine" aria-selected="true" tabindex="0">Pinnacle&reg; Pristine Shingles</button>
+        <button type="button" class="atlas-tab" data-tab="stormmaster" role="tab" id="atlas-tab-stormmaster" aria-controls="atlas-panel-stormmaster" aria-selected="false" tabindex="-1">StormMaster&reg; Shake Shingles</button>
+        <button type="button" class="atlas-tab" data-tab="sun" role="tab" id="atlas-tab-sun" aria-controls="atlas-panel-sun" aria-selected="false" tabindex="-1">Pinnacle&reg; Sun Shingles</button>
+      </div>
+
+      <div class="atlas-panel active" id="atlas-panel-pristine" role="tabpanel" aria-labelledby="atlas-tab-pristine" tabindex="0">
+        <p class="atlas-intro">Atlas Pinnacle&reg; Pristine is a popular architectural asphalt shingle with bold colors, premium strength, and lasting durability that works well on most Michigan homes.</p>
+        <div class="atlas-grid">
+          <div class="atlas-features">
+            <h3>Features</h3>
+            <ul>
+              <li>Lifetime Limited Warranty (per Atlas; transferable terms apply)</li>
+              <li>HP42&trade; Size: about 36% larger nailing area than standard shingles</li>
+              <li>Wind warranty up to 130 MPH (with proper installation)</li>
+              <li>Class A Fire Rating</li>
+              <li>3M&trade; Scotchgard&trade; Protector for algae resistance</li>
+              <li>Sweet Spot&trade; Nailing Zone</li>
+              <li>Eligible for Atlas Signature Select&reg; Roofing System upgrades</li>
+            </ul>
+          </div>
+          <div class="atlas-colors">
+            <h3>Colors</h3>
+            <div class="atlas-swatches">
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-black-shadow.jpg" alt="Black Shadow Atlas shingle"><span class="atlas-swatch-label">Black Shadow</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-coastal-granite.png" alt="Coastal Granite Atlas shingle"><span class="atlas-swatch-label">Coastal Granite</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-hearthstone.png" alt="Hearthstone Atlas shingle"><span class="atlas-swatch-label">Hearthstone</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-pewter.png" alt="Pewter Atlas shingle"><span class="atlas-swatch-label">Pewter</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-copper-canyon.png" alt="Copper Canyon Atlas shingle"><span class="atlas-swatch-label">Copper Canyon</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-summer-storm.png" alt="Summer Storm Atlas shingle"><span class="atlas-swatch-label">Summer Storm</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-oyster-shell.png" alt="Oyster Shell Atlas shingle"><span class="atlas-swatch-label">Oyster Shell</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-heatherblend.png" alt="Heatherblend Atlas shingle"><span class="atlas-swatch-label">Heatherblend</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-burnt-hickory.png" alt="Burnt Hickory Atlas shingle"><span class="atlas-swatch-label">Burnt Hickory</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-majestic-shake.png" alt="Majestic Shake Atlas shingle"><span class="atlas-swatch-label">Majestic Shake</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-weathered-wood.png" alt="Weathered Wood Atlas shingle"><span class="atlas-swatch-label">Weathered Wood</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-weathered-shadow.png" alt="Weathered Shadow Atlas shingle"><span class="atlas-swatch-label">Weathered Shadow</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-morning-harvest.png" alt="Morning Harvest Atlas shingle"><span class="atlas-swatch-label">Morning Harvest</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-tan-mist.png" alt="Tan Mist Atlas shingle"><span class="atlas-swatch-label">Tan Mist</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-woodland-green.png" alt="Woodland Green Atlas shingle"><span class="atlas-swatch-label">Woodland Green</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/pristine-sunset.png" alt="Sunset Atlas shingle"><span class="atlas-swatch-label">Sunset</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="atlas-panel" id="atlas-panel-stormmaster" role="tabpanel" aria-labelledby="atlas-tab-stormmaster" tabindex="0" hidden>
+        <p class="atlas-intro">Atlas StormMaster&reg; Shake gives you the look of a hand-split cedar shake with the strength of a Class 4 impact-rated shingle. Designed for storms, hail, and tough Michigan weather.</p>
+        <div class="atlas-grid">
+          <div class="atlas-features">
+            <h3>Features</h3>
+            <ul>
+              <li>Lifetime Limited Warranty (per Atlas; transferable terms apply)</li>
+              <li>Class 4 Impact Resistance (highest UL 2218 rating)</li>
+              <li>Polymer-modified (SBS) asphalt for added flexibility</li>
+              <li>Wind warranty up to 130 MPH (up to 150 MPH when installed as part of Signature Select&reg;)</li>
+              <li>Class A Fire Rating</li>
+              <li>3M&trade; Scotchgard&trade; Protector for algae resistance</li>
+              <li>May qualify for an insurance discount: check with your insurer</li>
+            </ul>
+          </div>
+          <div class="atlas-colors">
+            <h3>Colors</h3>
+            <div class="atlas-swatches">
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/stormmaster-moonlight-beach.png" alt="Moonlight Beach Atlas shingle"><span class="atlas-swatch-label">Moonlight Beach</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/stormmaster-midnight-lake.png" alt="Midnight Lake Atlas shingle"><span class="atlas-swatch-label">Midnight Lake</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/stormmaster-grand-teton.jpg" alt="Grand Teton Atlas shingle"><span class="atlas-swatch-label">Grand Teton</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/stormmaster-aspen-grove.png" alt="Aspen Grove Atlas shingle"><span class="atlas-swatch-label">Aspen Grove</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/stormmaster-black-shadow.png" alt="Black Shadow Atlas shingle"><span class="atlas-swatch-label">Black Shadow</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/stormmaster-pewter.png" alt="Pewter Atlas shingle"><span class="atlas-swatch-label">Pewter</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/stormmaster-chestnut.png" alt="Chestnut Atlas shingle"><span class="atlas-swatch-label">Chestnut</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/stormmaster-weathered-wood.png" alt="Weathered Wood Atlas shingle"><span class="atlas-swatch-label">Weathered Wood</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/stormmaster-copper-canyon.png" alt="Copper Canyon Atlas shingle"><span class="atlas-swatch-label">Copper Canyon</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/stormmaster-morning-harvest.png" alt="Morning Harvest Atlas shingle"><span class="atlas-swatch-label">Morning Harvest</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="atlas-panel" id="atlas-panel-sun" role="tabpanel" aria-labelledby="atlas-tab-sun" tabindex="0" hidden>
+        <p class="atlas-intro">Atlas Pinnacle&reg; Sun shingles use solar-reflective granules to bounce heat away from your roof. They look great and can help lower attic temperatures and summer cooling costs.</p>
+        <div class="atlas-grid">
+          <div class="atlas-features">
+            <h3>Features</h3>
+            <ul>
+              <li>Lifetime Limited Warranty (per Atlas; transferable terms apply)</li>
+              <li>ENERGY STAR&reg; qualified solar reflective granules (select colors)</li>
+              <li>Can help reduce attic temperatures and cooling costs</li>
+              <li>Wind warranty up to 130 MPH (with proper installation)</li>
+              <li>Class A Fire Rating</li>
+              <li>3M&trade; Scotchgard&trade; Protector for algae resistance</li>
+              <li>CRRC-rated cool-roof shingle (select colors meet Title 24 in CA)</li>
+            </ul>
+          </div>
+          <div class="atlas-colors">
+            <h3>Colors</h3>
+            <div class="atlas-swatches">
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/sun-cool-driftwood.jpg" alt="Cool Driftwood Atlas shingle"><span class="atlas-swatch-label">Cool Driftwood</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/sun-cool-surf.jpg" alt="Cool Surf Atlas shingle"><span class="atlas-swatch-label">Cool Surf</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/sun-cool-sand.jpg" alt="Cool Sand Atlas shingle"><span class="atlas-swatch-label">Cool Sand</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/sun-cool-moonlight-beach.jpg" alt="Cool Moonlight Beach Atlas shingle"><span class="atlas-swatch-label">Cool Moonlight Beach</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/sun-cool-coral-canyon.jpg" alt="Cool Coral Canyon Atlas shingle"><span class="atlas-swatch-label">Cool Coral Canyon</span></div>
+              <div class="atlas-swatch" tabindex="0"><img loading="lazy" src="/assets/images/atlas/sun-cool-coastal-cliffs.jpg" alt="Cool Coastal Cliffs Atlas shingle"><span class="atlas-swatch-label">Cool Coastal Cliffs</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="design-studio">Design Your Roof: Atlas Roof Visualizer</h2>
+    <p>Use the Atlas Roof Visualizer below to try different shingle colors on a sample home and see how they look before you buy. Pick a home style, then click through the Atlas color options.</p>
+    <div class="atlas-visualizer-wrap">
+      <iframe src="https://atlas.renoworks.com/" title="Atlas Roofing Visualizer" loading="lazy" allow="fullscreen" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <p class="atlas-visualizer-fallback"><a href="https://atlas.renoworks.com/" target="_blank" rel="noopener">Open the Atlas Roof Visualizer in a new tab &rarr;</a></p>
+
     <h2>Frequently Asked Questions: Michigan Roof Replacement</h2>
     <div class="cs-two-col">
       <div class="cs-card">
@@ -179,7 +330,7 @@ tags: "sitemap"
       </div>
       <div class="cs-card">
         <h3>What shingle brands do you install?</h3>
-        <p>We install Owens Corning Duration architectural shingles and other premium shingle lines. Popular colors include Brownwood, Slate Stone Gray, and Aged Copper. We can show you samples at your free estimate.</p>
+        <p>We specialize in Atlas Roofing shingles: Pinnacle&reg; Pristine, StormMaster&reg; Shake, and Pinnacle&reg; Sun. We also install Owens Corning Duration architectural shingles. We can bring color samples to your free estimate so you can see them on your home.</p>
       </div>
       <div class="cs-card">
         <h3>How long does a roof replacement take?</h3>
@@ -202,7 +353,7 @@ tags: "sitemap"
     <ul>
       <li><strong>Licensed and insured Michigan roofing contractor</strong></li>
       <li><strong>10-year labor warranty</strong> on all roof replacements</li>
-      <li><strong>Owens Corning and other manufacturer warranties</strong> on products installed</li>
+      <li><strong>Atlas, Owens Corning, and other manufacturer warranties</strong> on products installed</li>
       <li><strong>Roofs starting at $6,900</strong> with financing available</li>
       <li><strong>Clean jobsites:</strong> we protect your landscaping and clean up every nail</li>
       <li><strong>Honest assessments:</strong> we'll never oversell you</li>
@@ -221,5 +372,44 @@ tags: "sitemap"
 
 {% include 'sections/testimonial.html' %}
 {% include 'sections/cta.html' %}
+
+<script>
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.atlas-tab'));
+    var panels = {
+      pristine: document.getElementById('atlas-panel-pristine'),
+      stormmaster: document.getElementById('atlas-panel-stormmaster'),
+      sun: document.getElementById('atlas-panel-sun')
+    };
+    function activate(btn, focus) {
+      var key = btn.getAttribute('data-tab');
+      tabs.forEach(function (b) {
+        var active = b === btn;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-selected', active ? 'true' : 'false');
+        b.setAttribute('tabindex', active ? '0' : '-1');
+      });
+      Object.keys(panels).forEach(function (k) {
+        var p = panels[k];
+        if (!p) return;
+        if (k === key) { p.hidden = false; p.classList.add('active'); }
+        else { p.hidden = true; p.classList.remove('active'); }
+      });
+      if (focus) btn.focus();
+    }
+    tabs.forEach(function (btn, idx) {
+      btn.addEventListener('click', function () { activate(btn, false); });
+      btn.addEventListener('keydown', function (e) {
+        var key = e.key;
+        var next = null;
+        if (key === 'ArrowRight') next = tabs[(idx + 1) % tabs.length];
+        else if (key === 'ArrowLeft') next = tabs[(idx - 1 + tabs.length) % tabs.length];
+        else if (key === 'Home') next = tabs[0];
+        else if (key === 'End') next = tabs[tabs.length - 1];
+        if (next) { e.preventDefault(); activate(next, true); }
+      });
+    });
+  })();
+</script>
 
 {% endblock %}
