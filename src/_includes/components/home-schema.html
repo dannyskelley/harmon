@@ -1,35 +1,66 @@
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Infinity Home Solutions LLC",
+  "url": "https://infinityhomesolutionsllc.com",
+  "telephone": "(866) 705-8388",
+  "email": "info@infinityhomesolutionsllc.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "14350 Eureka Rd",
+    "addressLocality": "Southgate",
+    "addressRegion": "MI",
+    "postalCode": "48195",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.2162,
+    "longitude": -83.1938
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Southgate", "containedInPlace": {"@type": "State", "name": "Michigan"}},
+    {"@type": "City", "name": "Wyandotte", "containedInPlace": {"@type": "State", "name": "Michigan"}},
+    {"@type": "City", "name": "Trenton", "containedInPlace": {"@type": "State", "name": "Michigan"}},
+    {"@type": "City", "name": "Taylor", "containedInPlace": {"@type": "State", "name": "Michigan"}},
+    {"@type": "City", "name": "Lincoln Park", "containedInPlace": {"@type": "State", "name": "Michigan"}},
+    {"@type": "City", "name": "Allen Park", "containedInPlace": {"@type": "State", "name": "Michigan"}},
+    {"@type": "City", "name": "Dearborn", "containedInPlace": {"@type": "State", "name": "Michigan"}},
+    {"@type": "City", "name": "Shelby Township", "containedInPlace": {"@type": "State", "name": "Michigan"}},
+    {"@type": "City", "name": "Midland", "containedInPlace": {"@type": "State", "name": "Michigan"}},
+    {"@type": "AdministrativeArea", "name": "Metro Detroit"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Home Exterior Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Roof Replacement and Repair"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Siding Installation and Replacement"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Window Replacement"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Home Insulation"}}
+    ]
+  },
+  "openingHoursSpecification": [
     {
-        "@context": "http://schema.org",
-        "@type": "LocalBusiness",
-        "name": "{{ client.name }}",
-        {% if preloadImg %}"image": "{{ client.domain }}{{ preloadImg }}",{% endif %}
-        {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
-        {% if client.email %}"email": "{{ client.email }}",{% endif %}
-        {% if client.address %}
-            "address": {
-                "@type": "PostalAddress" {%- if client.address.lineOne -%},
-                    "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}"
-                {%- endif -%}
-                {%- if client.address.city -%},
-                    "addressLocality": "{{ client.address.city }}"
-                {%- endif -%}
-                {%- if client.address.state -%},
-                    "addressRegion": "{{ client.address.state }}"
-                {%- endif -%}
-                {%- if client.address.zip -%},
-                    "postalCode": "{{ client.address.zip }}"
-                {%- endif -%}
-                {%- if client.address.country -%},
-                    "addressCountry": "{{ client.address.country }}"
-                {%- endif -%}
-            },
-        {% endif %}
-        {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
-        {% if client.socials %}
-            "sameAs": [{%- for platform, url in client.socials -%}
-                    {% if not loop.first %},{% endif %}"{{ url }}"
-                {%- endfor -%}]
-        {% endif %}
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "14:00"
     }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/InfinityHomeSolutionsLLC",
+    "https://www.instagram.com/infinityhomesolutionsllc"
+  ],
+  "priceRange": "$$",
+  "description": "Infinity Home Solutions LLC is a family-owned Michigan contractor specializing in roofing, siding, window replacement, and home insulation. Serving Metro Detroit, Southgate, Wyandotte, Trenton, Taylor, and surrounding communities.",
+  "image": "https://infinityhomesolutionsllc.com/assets/images/roofing2.jpg"
+}
 </script>

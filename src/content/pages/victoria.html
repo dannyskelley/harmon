@@ -1,27 +1,15 @@
 ---
-title: "About | Victoria Camaj, Top Michigan Realtor | Providence Properties"
-description: "Learn more about Victoria Camaj, a trusted Michigan real estate expert with Providence Properties. Dedicated to helping clients buy and sell homes across Oakland County and Downriver."
+title: "Infinity Home Solutions | Michigan Contractor"
+description: "Infinity Home Solutions LLC offers roofing, siding, windows, and insulation for Michigan homeowners. Serving Metro Detroit. Free estimates."
 permalink: "/about/victoriacamaj/"
+eleventyExcludeFromCollections: true
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}"/>
-    <link rel="stylesheet" href="/assets/css/about.css">
+<meta name="robots" content="noindex, nofollow">
 {% endblock %}
 
 {% block body %}
-
- {% include 'components/content_victoria.html' %}
- 
- {% include 'components/content_victoria2.html' %}
-
-
-  {% include 'components/content_victoria3.html' %}
-
-
-    {% include 'sections/cta.html' %}
-
 {% endblock %}
