@@ -1,45 +1,33 @@
 ---
+title: 'Infinity Home Solutions | Michigan Roofing, Siding, Windows & Insulation Contractor'
+description: 'Infinity Home Solutions is a trusted, family owned Michigan contractor specializing in roofing, siding, window replacement, and insulation. Serving Metro Detroit. Licensed, insured, backed by a 10-year labor warranty and 100% satisfaction guarantee.'
 permalink: "/"
-layout: null
-eleventyExcludeFromCollections: true
+tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinity Home Solutions</title>
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #f9f9f9;
-            color: #222;
-        }
-        .holding {
-            text-align: center;
-            padding: 2rem;
-        }
-        .holding p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 1rem;
-        }
-        .holding a {
-            font-size: 1.25rem;
-            color: #1a1a1a;
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="holding">
-        <p>For inquiries, please contact us at:</p>
-        <a href="mailto:info@designgandalf.com">info@designgandalf.com</a>
-    </div>
-</body>
-</html>
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+
+
+    {% include "components/home-schema.html" %}
+{% endblock %}
+
+{% block body %}
+
+
+{% include 'components/hero.html' %}
+{% include 'components/2.html' %}
+{% include 'components/3.html' %}
+{% include 'sections/homepics.html' %}
+
+{% include 'sections/steps.html' %}
+{% include 'sections/map.html' %}
+{% include 'sections/testimonial.html' %}
+
+{% include 'sections/cta.html' %}
+
+
+
+
+{% endblock %}
